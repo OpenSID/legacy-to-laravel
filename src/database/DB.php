@@ -65,15 +65,15 @@ function &DB($params = '', $query_builder_override = null)
     // Backwards compatibility work-around for keeping the
     // $active_record config variable working. Should be
     // removed in v3.1
-    elseif (!isset($query_builder) && isset($active_record)) {
+    elseif (! isset($query_builder) && isset($active_record)) {
         $query_builder = $active_record;
     }
 
-    require_once dirname(__FILE__) . '/DB_driver.php';
+    require_once dirname(__FILE__).'/DB_driver.php';
 
-    if (!isset($query_builder) or $query_builder === true) {
-        require_once dirname(__FILE__) . '/DB_query_builder.php';
-        if (!class_exists(__NAMESPACE__ . '\CI_DB', false)) {
+    if (! isset($query_builder) or $query_builder === true) {
+        require_once dirname(__FILE__).'/DB_query_builder.php';
+        if (! class_exists(__NAMESPACE__.'\CI_DB', false)) {
             /**
              * CI_DB
              *
@@ -86,7 +86,7 @@ function &DB($params = '', $query_builder_override = null)
             {
             }
         }
-    } elseif (!class_exists(__NAMESPACE__ . '\CI_DB', false)) {
+    } elseif (! class_exists(__NAMESPACE__.'\CI_DB', false)) {
         /**
          * @ignore
          */
@@ -96,22 +96,22 @@ function &DB($params = '', $query_builder_override = null)
     }
 
     // Load the DB driver
-    $driver_file = dirname(__FILE__) . '/drivers/' . $params['dbdriver'] . '/' . $params['dbdriver'] . '_driver.php';
+    $driver_file = dirname(__FILE__).'/drivers/'.$params['dbdriver'].'/'.$params['dbdriver'].'_driver.php';
 
     file_exists($driver_file) or exit('Invalid DB driver');
     require_once $driver_file;
 
     // Instantiate the DB adapter
-    $driver = '\Fluent\Legacy\database\CI_DB_' . $params['dbdriver'] . '_driver';
+    $driver = '\Fluent\Legacy\database\CI_DB_'.$params['dbdriver'].'_driver';
     $DB = new $driver($params);
 
     // Check for a subdriver
-    if (!empty($DB->subdriver)) {
-        $driver_file = dirname(__FILE__) . '/drivers/' . $DB->dbdriver . '/subdrivers/' . $DB->dbdriver . '_' . $DB->subdriver . '_driver.php';
+    if (! empty($DB->subdriver)) {
+        $driver_file = dirname(__FILE__).'/drivers/'.$DB->dbdriver.'/subdrivers/'.$DB->dbdriver.'_'.$DB->subdriver.'_driver.php';
 
         if (file_exists($driver_file)) {
             require_once $driver_file;
-            $driver = 'CI_DB_' . $DB->dbdriver . '_' . $DB->subdriver . '_driver';
+            $driver = 'CI_DB_'.$DB->dbdriver.'_'.$DB->subdriver.'_driver';
             $DB = new $driver($params);
         }
     }

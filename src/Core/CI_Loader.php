@@ -14,13 +14,11 @@ declare(strict_types=1);
 namespace Fluent\Legacy\Core;
 
 use function assert;
-use Config\Services;
 use Fluent\Legacy\Core\Loader\ControllerPropertyInjector;
 use Fluent\Legacy\Core\Loader\DatabaseLoader;
 use Fluent\Legacy\Core\Loader\HelperLoader;
 use Fluent\Legacy\Core\Loader\LibraryLoader;
 use Fluent\Legacy\Core\Loader\ModelLoader;
-use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
 use Fluent\Legacy\Exception\NotImplementedException;
 use function is_object;

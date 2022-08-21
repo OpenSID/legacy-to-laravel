@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core\Loader;
 
+use Fluent\Legacy\database;
 use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
-use Fluent\Legacy\database;
 
 class DatabaseLoader
 {
@@ -30,7 +30,7 @@ class DatabaseLoader
 
     public function __construct(ControllerPropertyInjector $injector)
     {
-        require_once __DIR__ . '../../../database/DB.php';
+        require_once __DIR__.'../../../database/DB.php';
 
         $this->injector = $injector;
     }
