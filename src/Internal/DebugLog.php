@@ -26,6 +26,6 @@ class DebugLog
         $path = explode('\\', $classAndMethod);
         $method = array_pop($path);
 
-        log_message('debug', '['.$method.'] '.$message);
+        logger()->debug('['.$method.'] '.$message);
     }
 }
