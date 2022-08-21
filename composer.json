@@ -51,6 +51,11 @@
             "Tests\\Support\\": "vendor/codeigniter4/codeigniter4/admin/starter/tests/_support"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
     "scripts": {
         "test": [
             "vendor/bin/phpunit"
