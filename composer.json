@@ -16,8 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
-        "nguyenanhung/codeigniter-database-standalone": "^1.0"
+        "php": "^7.3 || ^8.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "^1.6.10",
