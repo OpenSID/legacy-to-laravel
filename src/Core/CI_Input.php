@@ -24,7 +24,9 @@ class CI_Input
 
     public function __construct()
     {
-        $this->request = request();
+        $this->request = app()->afterResolving('request', function ($app) {
+            return $app['request'];
+        });
     }
 
     /**
