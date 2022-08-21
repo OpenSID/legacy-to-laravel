@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "395a9c3961ee96d32f6e9b3a51020869",
-    "packages": [],
+    "content-hash": "2a6030de836bbd6a398ce94483733e94",
+    "packages": [
+        {
+            "name": "nguyenanhung/codeigniter-database-standalone",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nguyenanhung/codeigniter-database-standalone.git",
+                "reference": "70265db4c8795a0c31baec595454da6fc243bc79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nguyenanhung/codeigniter-database-standalone/zipball/70265db4c8795a0c31baec595454da6fc243bc79",
+                "reference": "70265db4c8795a0c31baec595454da6fc243bc79",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/DB.php"
+                ],
+                "psr-4": {
+                    "nguyenanhung\\CodeIgniterDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nguyen An Hung",
+                    "email": "dev@nguyenanhung.com",
+                    "homepage": "https://nguyenanhung.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A wrapper database from CodeIgniter",
+            "homepage": "https://github.com/nguyenanhung/codeigniter-database-standalone",
+            "keywords": [
+                "ci",
+                "codeigniter",
+                "database",
+                "mysql",
+                "mysqli",
+                "pdo",
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/nguyenanhung/codeigniter-database-standalone/issues",
+                "source": "https://github.com/nguyenanhung/codeigniter-database-standalone/tree/v1.0.1"
+            },
+            "time": "2021-09-17T09:02:55+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "brick/math",
