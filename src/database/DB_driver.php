@@ -726,11 +726,11 @@ abstract class CI_DB_driver
      */
     public function load_rdriver()
     {
-        $driver = 'CI_DB_'.$this->dbdriver.'_result';
+        $driver = 'Fluent\Legacy\database\CI_DB_'.$this->dbdriver.'_result';
 
         if (! class_exists($driver, false)) {
-            require_once BASEPATH.'database/DB_result.php';
-            require_once BASEPATH.'database/drivers/'.$this->dbdriver.'/'.$this->dbdriver.'_result.php';
+            require_once dirname(__FILE__).'/DB_result.php';
+            require_once dirname(__FILE__).'/drivers/'.$this->dbdriver.'/'.$this->dbdriver.'_result.php';
         }
 
         return $driver;
