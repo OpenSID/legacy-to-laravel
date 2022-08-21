@@ -169,7 +169,7 @@ abstract class CI_DB_forge
     public function __construct(&$db)
     {
         $this->db = &$db;
-        log_message('info', 'Database Forge Class Initialized');
+        logger()->info('Database Forge Class Initialized');
     }
 
     // --------------------------------------------------------------------

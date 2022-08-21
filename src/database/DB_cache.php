@@ -107,14 +107,14 @@ class CI_DB_Cache
             : rtrim($path, '/').'/';
 
         if (! is_dir($path)) {
-            log_message('debug', 'DB cache path error: '.$path);
+            logger('DB cache path error: '.$path);
 
             // If the path is wrong we'll turn off caching
             return $this->db->cache_off();
         }
 
         if (! is_really_writable($path)) {
-            log_message('debug', 'DB cache dir not writable: '.$path);
+            logger('DB cache dir not writable: '.$path);
 
             // If the path is not really writable we'll turn off caching
             return $this->db->cache_off();

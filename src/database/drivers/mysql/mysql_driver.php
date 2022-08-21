@@ -137,7 +137,7 @@ class CI_DB_mysql_driver extends CI_DB
 
         // Select the DB... assuming a database name is specified in the config file
         if ($this->database !== '' && ! $this->db_select()) {
-            log_message('error', 'Unable to select database: '.$this->database);
+            logger()->error('Unable to select database: '.$this->database);
 
             return ($this->db_debug === true)
                 ? $this->display_error('db_unable_to_select', $this->database)
