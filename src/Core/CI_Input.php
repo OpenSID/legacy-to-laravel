@@ -15,6 +15,7 @@ namespace Fluent\Legacy\Core;
 
 use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
 class CI_Input
@@ -24,9 +25,7 @@ class CI_Input
 
     public function __construct()
     {
-        $this->request = app()->afterResolving('request', function ($app) {
-            return $app['request'];
-        });
+        $this->request = Request::capture();
     }
 
     /**
@@ -222,7 +221,7 @@ class CI_Input
      */
     public function is_ajax_request()
     {
-        $this->request->ajax();
+        return $this->request->ajax();
     }
 
     /**
