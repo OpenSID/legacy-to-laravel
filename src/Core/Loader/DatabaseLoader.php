@@ -15,7 +15,7 @@ namespace Fluent\Legacy\Core\Loader;
 
 use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
-use nguyenanhung\CodeIgniterDB as CI;
+use Fluent\Legacy\database;
 
 class DatabaseLoader
 {
@@ -30,6 +30,8 @@ class DatabaseLoader
 
     public function __construct(ControllerPropertyInjector $injector)
     {
+        require_once __DIR__ . '../../../database/DB.php';
+
         $this->injector = $injector;
     }
 
@@ -43,11 +45,11 @@ class DatabaseLoader
         }
 
         if ($return) {
-            return CI\DB($params, $query_builder);
+            return database\DB($params, $query_builder);
         }
 
         if ($this->db === null) {
-            $this->db = CI\DB($params, $query_builder);
+            $this->db = database\DB($params, $query_builder);
             $this->injector->inject('db', $this->db);
         }
 
