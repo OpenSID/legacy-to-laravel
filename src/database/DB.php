@@ -2,6 +2,8 @@
 
 namespace Fluent\Legacy\database;
 
+use Exception;
+
 /**
  * CodeIgniter
  *
@@ -53,7 +55,7 @@ function &DB($params = '', $query_builder_override = null)
 {
     // No DB specified yet? Beat them senseless...
     if (empty($params['dbdriver'])) {
-        exit('You have not selected a database type to connect to.');
+        throw new Exception('You have not selected a database type to connect to.');
     }
 
     // Load the DB classes. Note: Since the query builder class is optional
@@ -98,7 +100,10 @@ function &DB($params = '', $query_builder_override = null)
     // Load the DB driver
     $driver_file = dirname(__FILE__).'/drivers/'.$params['dbdriver'].'/'.$params['dbdriver'].'_driver.php';
 
-    file_exists($driver_file) or exit('Invalid DB driver');
+    if (! file_exists($driver_file)) {
+        throw new Exception('Invalid DB driver');
+    }
+
     require_once $driver_file;
 
     // Instantiate the DB adapter
