@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core;
+namespace Fluent\Legacy\Core;
 
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 use LogicException;
 
 class CI_LangTest extends TestCase

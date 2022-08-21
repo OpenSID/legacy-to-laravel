@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core\Loader;
+namespace Fluent\Legacy\Core\Loader;
 
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class HelperLoaderTest extends TestCase
 {

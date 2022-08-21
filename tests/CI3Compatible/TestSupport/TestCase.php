@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\TestSupport;
+namespace Fluent\Legacy\TestSupport;
 
-use Kenjis\CI3Compatible\Core\CI_Controller;
-use Kenjis\CI3Compatible\LogTestHelperTrait;
+use Fluent\Legacy\Core\CI_Controller;
+use Fluent\Legacy\LogTestHelperTrait;
 use Kenjis\PhpUnitHelper\ReflectionHelper;
 use Kenjis\PhpUnitHelper\TestDouble;
 

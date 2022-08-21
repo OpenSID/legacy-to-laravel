@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core\Loader\ClassResolver;
+namespace Fluent\Legacy\Core\Loader\ClassResolver;
 
 use App\Models\News_model;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class ModelResolverTest extends TestCase
 {

@@ -33,8 +33,8 @@ If you use *ci3-to-4-upgrade-helper*, You can run the following code on CodeIgni
 namespace App\Controllers;
 
 use App\Models\News_model;
-use Kenjis\CI3Compatible\Core\CI_Controller;
-use Kenjis\CI3Compatible\Library\CI_Form_validation;
+use Fluent\Legacy\Core\CI_Controller;
+use Fluent\Legacy\Library\CI_Form_validation;
 
 /**
  * @property News_model $news_model
@@ -101,7 +101,7 @@ class News extends CI_Controller
 <?php
 namespace App\Models;
 
-use Kenjis\CI3Compatible\Core\CI_Model;
+use Fluent\Legacy\Core\CI_Model;
 
 class News_model extends CI_Model
 {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Internal;
+namespace Fluent\Legacy\Internal;
 
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class DebugLogTest extends TestCase
 {
     public function test_log_outputs_short_classname()
     {
-        $classAndMethod = 'Kenjis\CI3Compatible\Core\Loader\LibraryLoader::injectTo';
+        $classAndMethod = 'Fluent\Legacy\Core\Loader\LibraryLoader::injectTo';
         $message = 'CodeIgniter\View\View::$session already exists';
         DebugLog::log($classAndMethod, $message);
 

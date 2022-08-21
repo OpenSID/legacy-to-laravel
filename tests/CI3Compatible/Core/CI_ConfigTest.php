@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core;
+namespace Fluent\Legacy\Core;
 
-use Kenjis\CI3Compatible\Exception\RuntimeException;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Exception\RuntimeException;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class CI_ConfigTest extends TestCase
 {

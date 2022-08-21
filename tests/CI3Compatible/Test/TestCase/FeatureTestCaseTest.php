@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Test\TestCase;
+namespace Fluent\Legacy\Test\TestCase;
 
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class FeatureTestCaseTest extends TestCase
 {

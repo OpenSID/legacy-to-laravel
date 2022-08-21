@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use Kenjis\CI3Compatible\Core\CI_Controller;
+use Fluent\Legacy\Core\CI_Controller;
 
 class MY_Controller extends CI_Controller
 {

@@ -149,7 +149,7 @@ $this->config->load('ConfigShop');
  namespace Config;
  
  use CodeIgniter\Config\View as BaseView;
-+use Kenjis\CI3Compatible\Traits\View\ThisConfigInView;
++use Fluent\Legacy\Traits\View\ThisConfigInView;
  
  class View extends BaseView
  {
@@ -180,13 +180,13 @@ CI4 has built-in Database Migrations. *ci3-to-4-upgrade-helper* provides `CI_Mig
 ### Add Namespace and Use statement
 
 1. Add `namespace App\Database\Migrations`.
-2. Add `use Kenjis\CI3Compatible\Library\CI_Migration;`
+2. Add `use Fluent\Legacy\Library\CI_Migration;`
 
 Example:
 ```php
 namespace App\Database\Migrations; // Add
 
-use Kenjis\CI3Compatible\Library\CI_Migration; // Add
+use Fluent\Legacy\Library\CI_Migration; // Add
 
 class CreateBbs extends CI_Migration
 {
@@ -232,13 +232,13 @@ CI4 has built-in [Database Seeding](https://codeigniter4.github.io/CodeIgniter4/
 ### Add Namespace and Use statement
 
 1. Add `namespace App\Database\Seeds`.
-2. Add `use Kenjis\CI3Compatible\Library\Seeder;`
+2. Add `use Fluent\Legacy\Library\Seeder;`
 
 Example:
 ```php
 namespace App\Database\Seeds; // Add
 
-use Kenjis\CI3Compatible\Library\Seeder; // Add
+use Fluent\Legacy\Library\Seeder; // Add
 
 class ProductSeeder extends Seeder
 {
@@ -264,13 +264,13 @@ class ProductSeeder extends Seeder
 ### Add Namespace and Use statement
 
 1. Add `namespace App\Controllers;`.
-2. Add `use Kenjis\CI3Compatible\Core\CI_Controller;`
+2. Add `use Fluent\Legacy\Core\CI_Controller;`
 
 Example:
 ```php
 namespace App\Controllers; // Add
 
-use Kenjis\CI3Compatible\Core\CI_Controller; // Add
+use Fluent\Legacy\Core\CI_Controller; // Add
 
 class News extends CI_Controller
 {
@@ -298,13 +298,13 @@ class News extends CI_Controller
 ### Add Namespace and Use statement
 
 1. Add `namespace App\Models;`.
-2. Add `use Kenjis\CI3Compatible\Core\CI_Model;`
+2. Add `use Fluent\Legacy\Core\CI_Model;`
 
 Example:
 ```php
 namespace App\Models; // Add
 
-use Kenjis\CI3Compatible\Core\CI_Model; // Add
+use Fluent\Legacy\Core\CI_Model; // Add
 
 class News_model extends CI_Model
 {
@@ -385,7 +385,7 @@ Examples:
 *app/Config/Pager.php*
 ```php
     public $templates = [
-        'default_full'   => 'Kenjis\CI3Compatible\Views\Pager\default_full',
+        'default_full'   => 'Fluent\Legacy\Views\Pager\default_full',
         'default_simple' => 'CodeIgniter\Pager\Views\default_simple',
         'default_head'   => 'CodeIgniter\Pager\Views\default_head',
     ];

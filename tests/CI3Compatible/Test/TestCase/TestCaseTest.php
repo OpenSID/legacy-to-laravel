@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Test\TestCase;
+namespace Fluent\Legacy\Test\TestCase;
 
 use App\Controllers\MY_Controller;
-use Kenjis\CI3Compatible\Core\CI_Controller;
-use Kenjis\CI3Compatible\Test\TestCase\TestCase as CI3TestCase;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Core\CI_Controller;
+use Fluent\Legacy\Test\TestCase\TestCase as CI3TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 use function get_instance;
 

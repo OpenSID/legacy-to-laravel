@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Library;
+namespace Fluent\Legacy\Library;
 
 use CodeIgniter\Session\Handlers\FileHandler;
 use CodeIgniter\Session\Session;
@@ -11,7 +11,7 @@ use CodeIgniter\Test\TestLogger;
 use Config\App as AppConfig;
 use Config\Logger;
 use Config\Services;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 use function array_merge;
 

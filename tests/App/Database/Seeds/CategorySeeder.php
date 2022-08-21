@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Database\Seeds;
 
-use Kenjis\CI3Compatible\Library\Seeder;
+use Fluent\Legacy\Library\Seeder;
 
 class CategorySeeder extends Seeder
 {

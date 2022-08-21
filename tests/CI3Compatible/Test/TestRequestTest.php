@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Test;
+namespace Fluent\Legacy\Test;
 
 use App\Controllers\Test;
-use Kenjis\CI3Compatible\Test\TestCase\FeatureTestCase;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Test\TestCase\FeatureTestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 use function property_exists;
 

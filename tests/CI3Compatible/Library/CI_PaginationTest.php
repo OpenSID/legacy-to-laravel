@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Library;
+namespace Fluent\Legacy\Library;
 
 use CodeIgniter\HTTP\URI;
 use Config\Services;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class CI_PaginationTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Helper;
+namespace Fluent\Legacy\Helper;
 
 use function unlink;
 

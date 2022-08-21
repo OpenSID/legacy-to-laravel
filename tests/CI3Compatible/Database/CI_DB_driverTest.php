@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Database;
+namespace Fluent\Legacy\Database;
 
-use Kenjis\CI3Compatible\Exception\NotSupportedException;
+use Fluent\Legacy\Exception\NotSupportedException;
 
 class CI_DB_driverTest extends DatabaseTestCase
 {

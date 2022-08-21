@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core;
+namespace Fluent\Legacy\Core;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
-use Kenjis\CI3Compatible\Exception\NotSupportedException;
-use Kenjis\CI3Compatible\Exception\RuntimeException;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Exception\NotSupportedException;
+use Fluent\Legacy\Exception\RuntimeException;
+use Fluent\Legacy\TestSupport\TestCase;
 
 use function html_escape;
 use function show_404;

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Library;
+namespace Fluent\Legacy\Library;
 
 use App\Database\Seeds\CategorySeeder;
 use Config\Database;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class SeederTest extends TestCase
 {

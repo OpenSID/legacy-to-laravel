@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Helper;
+namespace Fluent\Legacy\Helper;
 
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 abstract class HelperTestCase extends TestCase
 {

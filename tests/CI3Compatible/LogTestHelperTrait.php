@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible;
+namespace Fluent\Legacy;
 
 use CodeIgniter\Test\TestLogger;
 use Exception;

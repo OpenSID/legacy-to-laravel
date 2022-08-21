@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core;
+namespace Fluent\Legacy\Core;
 
 use CodeIgniter\HTTP\Response;
 use Config\App;
 use Config\Services;
-use Kenjis\CI3Compatible\Exception\NotSupportedException;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Exception\NotSupportedException;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class CI_OutputTest extends TestCase
 {

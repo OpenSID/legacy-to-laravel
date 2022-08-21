@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Models\News_model;
-use Kenjis\CI3Compatible\Core\CI_Controller;
-use Kenjis\CI3Compatible\Library\CI_Form_validation;
+use Fluent\Legacy\Core\CI_Controller;
+use Fluent\Legacy\Library\CI_Form_validation;
 
 use function show_404;
 

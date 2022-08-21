@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Test\TestCase;
+namespace Fluent\Legacy\Test\TestCase;
 
 use App\Controllers\Test;
 use App\Models\News_model;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class UnitTestCaseTest extends TestCase
 {

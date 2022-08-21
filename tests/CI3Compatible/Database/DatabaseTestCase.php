@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Database;
+namespace Fluent\Legacy\Database;
 
 use CodeIgniter\Database\BaseConnection;
 use Config\Database;
-use Kenjis\CI3Compatible\DatabaseTestHelperTrait;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\DatabaseTestHelperTrait;
+use Fluent\Legacy\TestSupport\TestCase;
 
 abstract class DatabaseTestCase extends TestCase
 {

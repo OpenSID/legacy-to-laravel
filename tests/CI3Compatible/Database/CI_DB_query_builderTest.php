@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Database;
+namespace Fluent\Legacy\Database;
 
 class CI_DB_query_builderTest extends DatabaseTestCase
 {

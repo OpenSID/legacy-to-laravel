@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Test\Traits;
+namespace Fluent\Legacy\Test\Traits;
 
 use App\Controllers\MY_Controller;
-use Kenjis\CI3Compatible\Core\CI_Controller;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Core\CI_Controller;
+use Fluent\Legacy\TestSupport\TestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class ResetInstanceTest extends TestCase

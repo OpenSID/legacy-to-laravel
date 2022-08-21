@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Helper;
+namespace Fluent\Legacy\Helper;
 
 use Config\Services;
-use Kenjis\CI3Compatible\Exception\NotSupportedException;
+use Fluent\Legacy\Exception\NotSupportedException;
 
 class form_helperTest extends HelperTestCase
 {

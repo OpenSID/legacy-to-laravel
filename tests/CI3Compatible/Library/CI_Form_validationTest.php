@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Library;
+namespace Fluent\Legacy\Library;
 
 use CodeIgniter\HTTP\IncomingRequest;
 use Config\Services;
-use Kenjis\CI3Compatible\Exception\NotSupportedException;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Exception\NotSupportedException;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class CI_Form_validationTest extends TestCase
 {

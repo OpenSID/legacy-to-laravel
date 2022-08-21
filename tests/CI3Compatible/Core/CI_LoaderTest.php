@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Kenjis\CI3Compatible\Core;
+namespace Fluent\Legacy\Core;
 
 use App\Libraries\Validation\Field_validation;
 use App\Models\News_model;
 use App\Models\Shop\Shop_model;
-use Kenjis\CI3Compatible\Database\CI_DB;
-use Kenjis\CI3Compatible\Database\CI_DB_forge;
-use Kenjis\CI3Compatible\Library\CI_Form_validation;
-use Kenjis\CI3Compatible\Library\CI_User_agent;
-use Kenjis\CI3Compatible\TestSupport\TestCase;
+use Fluent\Legacy\Database\CI_DB;
+use Fluent\Legacy\Database\CI_DB_forge;
+use Fluent\Legacy\Library\CI_Form_validation;
+use Fluent\Legacy\Library\CI_User_agent;
+use Fluent\Legacy\TestSupport\TestCase;
 
 class CI_LoaderTest extends TestCase
 {

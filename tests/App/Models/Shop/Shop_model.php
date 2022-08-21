@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Models\Shop;
 
-use Kenjis\CI3Compatible\Core\CI_Input;
-use Kenjis\CI3Compatible\Core\CI_Loader;
-use Kenjis\CI3Compatible\Core\CI_Model;
-use Kenjis\CI3Compatible\Database\CI_DB;
+use Fluent\Legacy\Core\CI_Input;
+use Fluent\Legacy\Core\CI_Loader;
+use Fluent\Legacy\Core\CI_Model;
+use Fluent\Legacy\Database\CI_DB;
 
 /**
  * @property CI_Loader $load
