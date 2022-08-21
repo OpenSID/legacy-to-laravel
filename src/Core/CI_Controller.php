@@ -13,14 +13,11 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use CodeIgniter\HTTP\RequestInterface;
-use CodeIgniter\HTTP\ResponseInterface;
 use Fluent\Legacy\Internal\DebugLog;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
-use Psr\Log\LoggerInterface;
 
 class CI_Controller extends Controller
 {
@@ -31,6 +28,13 @@ class CI_Controller extends Controller
 
     /** @var CI_Loader */
     public $load;
+
+    /**
+     * Helpers that will be automatically loaded on class instantiation.
+     *
+     * @var array
+     */
+    protected $helpers = [];
 
     public function __construct()
     {
@@ -66,14 +70,6 @@ class CI_Controller extends Controller
     private function autoloadHelpers()
     {
         $this->load->helper($this->helpers);
-    }
-
-    public function initController(
-        RequestInterface $request,
-        ResponseInterface $response,
-        LoggerInterface $logger
-    ): void {
-        parent::initController($request, $response, $logger);
     }
 
     public static function &get_instance(): CI_Controller
