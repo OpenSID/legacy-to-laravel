@@ -101,7 +101,7 @@ class CI_Loader
 
     private function injectLoadedClassesToView(): void
     {
-        $view = Services::renderer();
+        $view = view();
 
         if ($this->coreClassesInjectedToView === false) {
             $this->coreLoader->injectTo($view);
