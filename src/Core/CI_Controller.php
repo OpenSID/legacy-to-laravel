@@ -24,7 +24,7 @@ use Illuminate\Routing\Controller;
 /**
  * @property \Fluent\Legacy\Core\CI_Benchmark             $benchmark
  * @property \Fluent\Legacy\Core\CI_Config                $config
- * @property \Fluent\Legacy\database\CI_DB_query_builder  $db
+ * @property \Fluent\Legacy\Database\CI_DB_query_builder  $db
  * @property \Fluent\Legacy\Core\CI_Input                 $input
  * @property \Fluent\Legacy\Core\CI_Lang                  $lang
  * @property \Fluent\Legacy\Core\CI_Loader                $loader

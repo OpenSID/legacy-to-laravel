@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core\Loader;
 
-use Fluent\Legacy\database;
+use Fluent\Legacy\Database;
 use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
 
@@ -47,11 +47,11 @@ class DatabaseLoader
         }
 
         if ($return) {
-            return database\DB($params, $query_builder);
+            return Database\DB($params, $query_builder);
         }
 
         if ($this->db === null) {
-            $this->db = database\DB($params, $query_builder);
+            $this->db = Database\DB($params, $query_builder);
             $this->injector->inject('db', $this->db);
         }
 

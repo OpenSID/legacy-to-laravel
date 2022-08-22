@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy\database;
+namespace Fluent\Legacy\Database;
 
 /**
  * CodeIgniter
@@ -726,7 +726,7 @@ abstract class CI_DB_driver
      */
     public function load_rdriver()
     {
-        $driver = 'Fluent\Legacy\database\CI_DB_'.$this->dbdriver.'_result';
+        $driver = 'Fluent\Legacy\Database\CI_DB_'.$this->dbdriver.'_result';
 
         if (! class_exists($driver, false)) {
             require_once dirname(__FILE__).'/DB_result.php';

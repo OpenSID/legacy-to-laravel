@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy\database;
+namespace Fluent\Legacy\Database;
 
 /**
  * CodeIgniter
@@ -166,7 +166,7 @@ function &DB($params = '', $query_builder_override = null)
     require_once $driver_file;
 
     // Instantiate the DB adapter
-    $driver = '\Fluent\Legacy\database\CI_DB_'.$params['dbdriver'].'_driver';
+    $driver = '\Fluent\Legacy\Database\CI_DB_'.$params['dbdriver'].'_driver';
     $DB = new $driver($params);
 
     // Check for a subdriver

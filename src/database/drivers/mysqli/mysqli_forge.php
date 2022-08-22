@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy\database;
+namespace Fluent\Legacy\Database;
 
 /**
  * CodeIgniter
