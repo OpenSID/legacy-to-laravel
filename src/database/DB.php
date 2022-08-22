@@ -114,7 +114,7 @@ function &DB($params = '', $query_builder_override = null)
 
     // No DB specified yet? Beat them senseless...
     if (empty($params['dbdriver'])) {
-        throw new Exception('You have not selected a database type to connect to.');
+        show_error('You have not selected a database type to connect to.');
     }
 
     // Load the DB classes. Note: Since the query builder class is optional
@@ -160,7 +160,7 @@ function &DB($params = '', $query_builder_override = null)
     $driver_file = dirname(__FILE__).'/drivers/'.$params['dbdriver'].'/'.$params['dbdriver'].'_driver.php';
 
     if (! file_exists($driver_file)) {
-        throw new Exception('Invalid DB driver');
+        show_error('Invalid DB driver');
     }
 
     require_once $driver_file;
