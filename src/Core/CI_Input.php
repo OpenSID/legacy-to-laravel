@@ -129,7 +129,7 @@ class CI_Input
      * @param	string		$samesite	SameSite attribute
      * @return	void
      */
-    public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = NULL, $httponly = NULL, $samesite = NULL)
+    public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = null, $httponly = null, $samesite = null)
     {
         return Cookie::queue(...func_get_args());
     }
@@ -270,8 +270,8 @@ class CI_Input
         if ($xss_clean !== false) {
             throw new NotSupportedException(
                 '$xss_clean is not supported.'
-                    . ' Preventing XSS should be performed on output, not input!'
-                    . ' Use esc() instead.'
+                    .' Preventing XSS should be performed on output, not input!'
+                    .' Use esc() instead.'
             );
         }
     }
