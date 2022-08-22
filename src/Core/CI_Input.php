@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
