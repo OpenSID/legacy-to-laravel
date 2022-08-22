@@ -26,7 +26,7 @@ use Illuminate\Routing\Controller;
  * @property \Fluent\Legacy\Core\CI_Input                 $input
  * @property \Fluent\Legacy\Core\CI_Lang                  $lang
  * @property \Fluent\Legacy\Core\CI_Loader                $loader
- * @property \Fluent\Legacy\Core\CI_log                   $log
+ * @property \Fluent\Legacy\Core\CI_Log                   $log
  * @property \Fluent\Legacy\Core\CI_Output                $output
  * @property \Fluent\Legacy\Core\CI_Router                $router
  * @property \Fluent\Legacy\Core\CI_Security              $security

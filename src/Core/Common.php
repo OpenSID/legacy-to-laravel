@@ -81,7 +81,7 @@ if (! function_exists('log_message')) {
      */
     function log_message($level, $message)
     {
-        get_instance()->log->{$level}($message);
+        get_instance()->log->write_log($level, $message);
     }
 }
 
