@@ -2,8 +2,6 @@
 
 namespace Fluent\Legacy\database;
 
-use Exception;
-
 /**
  * CodeIgniter
  *
