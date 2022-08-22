@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Helper;
 
-use function unlink;
-
 class captcha_helperTest extends HelperTestCase
 {
     public function test_create_captcha(): void

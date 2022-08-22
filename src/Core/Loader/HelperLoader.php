@@ -14,8 +14,6 @@ declare(strict_types=1);
 namespace Fluent\Legacy\Core\Loader;
 
 use Fluent\Legacy\Internal\DebugLog;
-use function in_array;
-use function is_array;
 
 class HelperLoader
 {

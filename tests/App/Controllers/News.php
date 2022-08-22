@@ -8,8 +8,6 @@ use App\Models\News_model;
 use Fluent\Legacy\Core\CI_Controller;
 use Fluent\Legacy\Library\CI_Form_validation;
 
-use function show_404;
-
 /**
  * @property News_model $news_model
  * @property CI_Form_validation $form_validation

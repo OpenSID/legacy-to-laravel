@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use function get_instance;
-
 /**
  * @property \Fluent\Legacy\Core\CI_Benchmark             $benchmark
  * @property \Fluent\Legacy\Core\CI_Config                $config

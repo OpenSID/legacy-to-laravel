@@ -13,14 +13,8 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core\Loader;
 
-use function array_key_exists;
-use function end;
-use function explode;
 use Fluent\Legacy\Core\Loader\ClassResolver\LibraryResolver;
 use Fluent\Legacy\Internal\DebugLog;
-use function get_class;
-use function is_array;
-use function is_int;
 use ReflectionObject;
 
 class LibraryLoader

@@ -16,7 +16,6 @@ namespace Fluent\Legacy\Test\Traits;
 use Config\Services;
 use Fluent\Legacy\Core\CI_Controller;
 use Fluent\Legacy\Core\CoreLoader;
-use function get_instance;
 
 /**
  * @internal

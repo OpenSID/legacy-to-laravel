@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core\Loader;
 
-use function strrpos;
-
 trait InSubDir
 {
     private function inSubDir(string $component): bool

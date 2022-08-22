@@ -13,14 +13,7 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use function array_merge;
-use function file_exists;
-use function is_array;
 use LogicException;
-use function preg_match;
-use function preg_replace;
-use function realpath;
-use function str_replace;
 
 class CI_Lang
 {

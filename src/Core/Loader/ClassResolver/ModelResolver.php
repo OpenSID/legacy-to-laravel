@@ -13,12 +13,7 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core\Loader\ClassResolver;
 
-use function explode;
 use Fluent\Legacy\Core\Loader\InSubDir;
-use function implode;
-use function strlen;
-use function substr;
-use function ucfirst;
 
 class ModelResolver
 {

@@ -20,10 +20,6 @@ use Config\Services;
 use Fluent\Legacy\Exception\NotImplementedException;
 use Fluent\Legacy\Library\Upload\FileExtention;
 use Fluent\Legacy\Library\Upload\ValidationRuleMaker;
-use function realpath;
-use function round;
-use function strlen;
-use function substr;
 
 class CI_Upload
 {

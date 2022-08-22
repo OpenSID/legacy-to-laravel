@@ -8,8 +8,6 @@ use App\Controllers\Test;
 use Fluent\Legacy\Test\TestCase\FeatureTestCase;
 use Fluent\Legacy\TestSupport\TestCase;
 
-use function property_exists;
-
 class TestRequestTest extends TestCase
 {
     /** @var TestRequest */

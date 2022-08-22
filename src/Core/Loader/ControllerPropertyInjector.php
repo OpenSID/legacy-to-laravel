@@ -15,8 +15,6 @@ namespace Fluent\Legacy\Core\Loader;
 
 use Fluent\Legacy\Core\CI_Controller;
 use Fluent\Legacy\Internal\DebugLog;
-use function get_class;
-use function property_exists;
 
 class ControllerPropertyInjector
 {

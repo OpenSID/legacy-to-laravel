@@ -9,8 +9,6 @@ use Fluent\Legacy\Core\CI_Controller;
 use Fluent\Legacy\Test\TestCase\TestCase as CI3TestCase;
 use Fluent\Legacy\TestSupport\TestCase;
 
-use function get_instance;
-
 class TestCaseTest extends TestCase
 {
     public function test_resetInstance()

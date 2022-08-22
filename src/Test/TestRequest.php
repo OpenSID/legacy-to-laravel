@@ -19,8 +19,6 @@ use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\FeatureResponse;
 use Config\App;
 use Fluent\Legacy\Test\TestCase\TestCase;
-use function get_instance;
-use function strtolower;
 
 class TestRequest
 {

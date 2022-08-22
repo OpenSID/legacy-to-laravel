@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Library\Upload;
 
-use function explode;
 use Fluent\Legacy\Exception\NotSupportedException;
-use function implode;
 
 class ValidationRuleMaker
 {

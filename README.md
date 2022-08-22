@@ -1,10 +1,10 @@
-# CodeIgniter 3 to 4 Upgrade Helper
+# Legacy CodeIgniter3 to Laravel
 
-This project helps you upgrade your CodeIgniter3 apps to CodeIgniter4.
+This project helps you upgrade your CodeIgniter3 apps to Laravel.
 
 - The goal is to reduce upgrade costs.
 - It provides compatible interfaces for common use cases in CodeIgniter3 apps.
-- It also provides compatible interfaces to test code using [ci-phpunit-test](https://github.com/kenjis/ci-phpunit-test).
+- It also provides compatible interfaces to test code using [ci-phpunit-test]().
 - It does not aim to be 100% compatible.
 - **This project is under early development.**
 - **This project is under early development.**
@@ -13,24 +13,24 @@ This project helps you upgrade your CodeIgniter3 apps to CodeIgniter4.
 
 ## Requirements
 
-- CodeIgniter 4.1.3 or later
-  - [ci4-app-template](https://github.com/kenjis/ci4-app-template) can be used
+- Laravel 8.x or later
 - PHP 7.3 or later
 
-## Sample Code
+## Installation
 
-- https://github.com/kenjis/ci3-to-4-news
-- https://github.com/kenjis/ci3-to-4-news/tree/main/tests/app
-- https://github.com/kenjis/ci4-online-games-store
-- https://github.com/kenjis/ci4-qrcode
-- (Japanese) https://github.com/kenjis/ci4-tettei-apps
+You can install the package via composer:
 
-If you use *ci3-to-4-upgrade-helper*, You can run the following code on CodeIgniter4.
+``` bash
+composer require agungsugiarto/legacy-to-laravel
+```
 
-*app/Controllers/News.php*
+## Usage
+If you use *legacy-to-laravel*, You can run the following code on Laravel.
+
+*app/Http/Controllers/News.php*
 ```php
 <?php
-namespace App\Controllers;
+namespace App\Http\Controllers;
 
 use App\Models\News_model;
 use Fluent\Legacy\Core\CI_Controller;
@@ -140,7 +140,7 @@ class News_model extends CI_Model
 }
 ```
 
-*app/Views/news/create.php*
+*/resources/views/news/create.php*
 ```php
 <h2><?php echo $title; ?></h2>
 
@@ -159,22 +159,24 @@ class News_model extends CI_Model
 </form>
 ```
 
-## How to Upgrade from CI3 to CI4
+## Changelog
 
-See [How to Upgrade from CI3 to CI4](docs/HowToUpgradeFromCI3ToCI4.md).
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-If you have test code with [ci-phpunit-test](https://github.com/kenjis/ci-phpunit-test), see [How to Upgrade Test Code from CI3 to CI4](docs/HowToUpgradeTestCodeFromCI3ToCI4.md).
+## Contributing
 
-## For Development
+Contributions are very welcome.
 
-### Installation
+## Security Vulnerabilities
 
-    composer install
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-### Available Commands
+## Credits
 
-    composer test              // Run unit test
-    composer tests             // Test and quality checks
-    composer cs-fix            // Fix the coding style
-    composer sa                // Run static analysys tools
-    composer run-script --list // List all commands
+- [Kenji Suzuki](https://github.com/kenjis)
+- [Agung Sugiarto](https://github.com/agungsugiarto)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

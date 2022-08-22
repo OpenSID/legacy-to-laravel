@@ -13,15 +13,11 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use function array_change_key_case;
-use function array_keys;
 use const CASE_LOWER;
 use Fluent\Legacy\Core\Loader\ClassResolver\CoreResolver;
 use Fluent\Legacy\Core\Loader\ControllerPropertyInjector;
 use Fluent\Legacy\Internal\DebugLog;
-use function get_class;
 use ReflectionObject;
-use function strtolower;
 
 class CoreLoader
 {

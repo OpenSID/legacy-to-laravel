@@ -13,8 +13,6 @@ use Config\Logger;
 use Config\Services;
 use Fluent\Legacy\TestSupport\TestCase;
 
-use function array_merge;
-
 /**
  * @runTestsInSeparateProcesses
  * @preserveGlobalState         disabled

@@ -13,14 +13,10 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Library;
 
-use function array_keys;
 use CodeIgniter\Pager\Pager;
 use Config\Pager as PagerConfig;
 use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
-use function implode;
-use function in_array;
-use function is_array;
 
 class CI_Pagination
 {

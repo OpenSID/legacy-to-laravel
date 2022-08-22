@@ -13,21 +13,13 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use function array_key_exists;
-use function array_unshift;
-use CodeIgniter\Config\BaseConfig;
 use Fluent\Legacy\Exception\NotImplementedException;
 use Fluent\Legacy\Exception\RuntimeException;
-use function property_exists;
-use function site_url;
 
 class CI_Config
 {
-    /** @var BaseConfig[] */
-    private $configs = [];
-
-    /** @var BaseConfig[] */
-    private $configsWithSection;
+    /** @var array */
+    private $config = [];
 
     /**
      * Load Config File
@@ -56,12 +48,14 @@ class CI_Config
         }
 
         if ($use_sections) {
-            $this->configsWithSection[$file] = $config;
+            $this->config[$file] = isset($this->config[$file])
+                ? array_merge($this->config[$file], $config)
+                : $config;
 
             return true;
         }
 
-        array_unshift($this->configs, $config);
+        $this->config = array_merge($this->config, $config);
 
         return true;
     }
@@ -76,47 +70,22 @@ class CI_Config
      */
     public function item(string $item, string $index = '')
     {
-        if ($index !== '') {
-            if (array_key_exists($index, $this->configsWithSection)) {
-                if (property_exists($this->configsWithSection[$index], $item)) {
-                    return $this->configsWithSection[$index]->$item;
-                }
-            }
-
-            throw new RuntimeException(
-                'Cannot find config "'.$item.'" in "'.$index.'".'
-                .' Check your Config class name or property name.'
-            );
+        if ($index == '') {
+            return isset($this->config[$item]) ? $this->config[$item] : null;
         }
 
-        foreach ($this->configs as $config) {
-            if (property_exists($config, $item)) {
-                return $config->$item;
-            }
-        }
-
-        throw new RuntimeException(
-            'Cannot find config "'.$item.'"'
-            .' Check your Config class name.'
-        );
+        return isset($this->config[$index], $this->config[$index][$item]) ? $this->config[$index][$item] : null;
     }
 
     /**
-     * Site URL
+     * Set a config file item
      *
-     * Returns base_url . index_page [. uri_string]
-     *
-     * @param   string|string[] $uri      URI string or an array of segments
-     * @param   string          $protocol
-     *
-     * @return  string
-     *
-     * @uses    CI_Config::_uri_string()
+     * @param	string	$item	Config item key
+     * @param	string	$value	Config item value
+     * @return	void
      */
-    public function site_url($uri = '', ?string $protocol = null): string
+    public function set_item($item, $value)
     {
-        helper('url');
-
-        return site_url($uri, $protocol);
+        $this->config[$item] = $value;
     }
 }

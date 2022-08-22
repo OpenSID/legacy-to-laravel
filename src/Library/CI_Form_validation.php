@@ -19,8 +19,6 @@ use Config\Services;
 use Config\Validation as ConfigValidation;
 use Fluent\Legacy\Exception\NotImplementedException;
 use Fluent\Legacy\Exception\NotSupportedException;
-use function get_instance;
-use function is_array;
 
 class CI_Form_validation
 {

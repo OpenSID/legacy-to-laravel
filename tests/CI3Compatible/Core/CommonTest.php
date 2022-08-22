@@ -9,10 +9,6 @@ use Fluent\Legacy\Exception\NotSupportedException;
 use Fluent\Legacy\Exception\RuntimeException;
 use Fluent\Legacy\TestSupport\TestCase;
 
-use function html_escape;
-use function show_404;
-use function show_error;
-
 class CommonTest extends TestCase
 {
     public function test_show_404_throws_PageNotFoundException(): void

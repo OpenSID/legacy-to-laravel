@@ -13,16 +13,6 @@ use Fluent\Legacy\TestSupport\TestCase;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 
-use function copy;
-use function file_exists;
-use function file_put_contents;
-use function is_dir;
-use function mkdir;
-use function realpath;
-use function rename;
-use function rmdir;
-use function unlink;
-
 class CI_UploadTest extends TestCase
 {
     /** @var vfsStreamDirectory */

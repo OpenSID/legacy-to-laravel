@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Internal;
 
-use function array_pop;
-use function explode;
 
 /**
  * @internal

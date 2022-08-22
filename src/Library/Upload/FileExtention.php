@@ -13,11 +13,6 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Library\Upload;
 
-use function count;
-use function end;
-use function explode;
-use function strtolower;
-
 class FileExtention
 {
     public function toLower(string $filename)

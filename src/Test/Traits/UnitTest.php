@@ -16,9 +16,6 @@ namespace Fluent\Legacy\Test\Traits;
 use Config\Services;
 use Fluent\Legacy\Core\CI_Controller;
 use Fluent\Legacy\Core\CI_Model;
-use function get_instance;
-use function strrpos;
-use function substr;
 
 trait UnitTest
 {

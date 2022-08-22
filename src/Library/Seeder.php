@@ -13,15 +13,11 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Library;
 
-use function array_map;
 use CodeIgniter\Database\BaseConnection;
 use CodeIgniter\Database\Seeder as CI4Seeder;
 use Config\Database;
 use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
-use function is_array;
-use function is_string;
-use function rtrim;
 
 /**
  * Seeder

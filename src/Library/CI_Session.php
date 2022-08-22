@@ -17,7 +17,6 @@ use CodeIgniter\Session\Session;
 use Config\App;
 use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
-use function is_array;
 
 class CI_Session
 {
