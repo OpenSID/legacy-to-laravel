@@ -35,6 +35,7 @@ class CoreLoader
         'Config' => null,
         'Input' => null,
         'Lang' => null,
+        'Log' => null,
         'Output' => null,
         'Security' => null,
         'URI' => null,

@@ -68,6 +68,23 @@ if (! function_exists('show_404')) {
     }
 }
 
+if (! function_exists('log_message')) {
+    /**
+     * Error Logging Interface
+     *
+     * We use this as a simple mechanism to access the logging
+     * class and send messages to be logged.
+     *
+     * @param	string	the error level: 'error', 'debug' or 'info'
+     * @param	string	the error message
+     * @return	void
+     */
+    function log_message($level, $message)
+    {
+        get_instance()->log->{$level}($message);
+    }
+}
+
 if (! function_exists('html_escape')) {
     /**
      * Returns HTML escaped variable.
