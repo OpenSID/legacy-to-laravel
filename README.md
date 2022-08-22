@@ -27,9 +27,36 @@ composer require agungsugiarto/legacy-to-laravel
 ## Usage
 If you use *legacy-to-laravel*, You can run the following code on Laravel.
 
+### Connect to Database
+Open file `config/database.php` to configuration
+```diff
+'connections' => [
+    'mysql' => [
++        // codeigniter3 legacy config database
++        'dsn'          => env('DATABASE_URL'),
++        'hostname'     => env('DB_HOST', '127.0.0.1'),
++        'dbdriver'     => 'mysqli',
++        'dbprefix'     => '',
++        'pconnect'     => false,
++        'db_debug'     => (env('APP_ENV') !== 'production'),
++        'cache_on'     => false,
++        'cachedir'     => '',
++        'char_set'     => 'utf8mb4',
++        'dbcollat'     => 'utf8mb4_unicode_ci',
++        'swap_pre'     => '',
++        'encrypt'      => false,
++        'compress'     => false,
++        'stricton'     => false,
++        'failover'     => [],
++        'save_queries' => true
+    ],
+],
+```
+
 *app/Http/Controllers/News.php*
 ```php
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\News_model;
@@ -45,6 +72,8 @@ class News extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $this->load->database();
         $this->load->model('news_model');
         $this->load->helper('url_helper');
     }
@@ -99,19 +128,13 @@ class News extends CI_Controller
 *app/Models/News_model.php*
 ```php
 <?php
+
 namespace App\Models;
 
 use Fluent\Legacy\Core\CI_Model;
 
 class News_model extends CI_Model
 {
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->load->database();
-    }
-
     public function get_news($slug = false)
     {
         if ($slug === false) {

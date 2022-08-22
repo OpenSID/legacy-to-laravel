@@ -68,15 +68,17 @@ function &DB($params = '', $query_builder_override = null)
 
         if ($params !== '') {
             $active_group = $params;
+        } else {
+            $active_group = $db['default'];
         }
 
         if (! isset($db['default'])) {
             show_error('You have not specified a database connection group via default in your config/database.php file.');
-        } elseif (! isset($db['connections'][$db['default']])) {
+        } elseif (! isset($db['connections'][$active_group])) {
             show_error('You have specified an invalid database connection group ('.$active_group.') in your config/database.php file.');
         }
 
-        $params = $db['connections'][$db['default']];
+        $params = $db['connections'][$active_group];
     } elseif (is_string($params)) {
         /**
          * Parse the URL from the DSN string
