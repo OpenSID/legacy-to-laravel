@@ -15,11 +15,21 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
-use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
+use Illuminate\Http\Response;
 
 class CI_Output
 {
+    /**
+     * @var \Illuminate\Http\Response
+     */
+    protected $response;
+
+    public function __construct()
+    {
+        $this->response = new Response();
+    }
+
     /**
      * Set Header
      *
@@ -36,17 +46,15 @@ class CI_Output
      */
     public function set_header(string $header, bool $replace = true): self
     {
-        $response = Services::response();
-
         [$name, $value] = explode(':', $header, 2);
 
         if ($replace) {
-            $response->setHeader($name, trim($value));
+            $this->response->header($name, trim($value));
 
             return $this;
         }
 
-        $response->appendHeader($name, trim($value));
+        $this->response->header($name, trim($value));
 
         return $this;
     }
@@ -60,9 +68,64 @@ class CI_Output
      */
     public function get_output(): string
     {
-        $response = Services::response();
+        return $this->response->getContent();
+    }
 
-        return $response->getBody();
+    /**
+     * Set Output
+     *
+     * Sets the output string.
+     *
+     * @param	string	$output	Output data
+     * @return	CI_Output
+     */
+    public function set_output($output)
+    {
+        $this->response->setContent($output);
+
+        return $this;
+    }
+
+    /**
+     * Set Content-Type Header
+     *
+     * @param	string	$mime_type	Extension of the file we're outputting
+     * @param	string	$charset	Character set (default: NULL)
+     * @return	CI_Output
+     */
+    public function set_content_type($mime_type, $charset = null)
+    {
+        $this->response->header($mime_type, $charset);
+
+        return $this;
+    }
+
+    /**
+     * Get Header
+     *
+     * @param	string	$header
+     * @return	string
+     */
+    public function get_header($header)
+    {
+        return $this->response->headers->get($header);
+    }
+
+    /**
+     * Set HTTP Status Header
+     *
+     * As of version 1.7.2, this is an alias for common function
+     * set_status_header().
+     *
+     * @param	int	$code	Status code (default: 200)
+     * @param	string	$text	Optional message
+     * @return	CI_Output
+     */
+    public function set_status_header($code = 200, $text = '')
+    {
+        $this->response->setStatusCode($code, $text);
+
+        return $this;
     }
 
     /**
@@ -72,10 +135,6 @@ class CI_Output
      */
     public function enable_profiler(): self
     {
-        throw new NotSupportedException(
-            'enable_profiler() is not supported.'
-            .' In CI4 Debug Toolbar is enabled by default not in production.'
-            .' See <https://codeigniter4.github.io/CodeIgniter4/testing/debugging.html#the-debug-toolbar>'
-        );
+        throw new NotSupportedException('enable_profiler() is not supported.');
     }
 }
