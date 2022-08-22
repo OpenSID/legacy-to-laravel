@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,31 +34,34 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 2.1.0
  * @filesource
  */
 
 /**
- * PDO Forge Class
+ * PDO Forge Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/database/
+ *
+ * @see		https://codeigniter.com/database/
  */
 class CI_DB_pdo_forge extends CI_DB_forge
 {
     /**
-     * CREATE TABLE IF statement
+     * CREATE TABLE IF statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_create_table_if = false;
 
     /**
-     * DROP TABLE IF statement
+     * DROP TABLE IF statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_drop_table_if = false;
 }

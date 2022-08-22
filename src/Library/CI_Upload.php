@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -41,11 +41,9 @@ class CI_Upload
     private $newName;
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param   array $config
-     *
-     * @return  void
+     * @return void
      */
     public function __construct(array $config = [])
     {
@@ -78,11 +76,9 @@ class CI_Upload
     }
 
     /**
-     * Perform the file upload
+     * Perform the file upload.
      *
-     * @param   string $field
-     *
-     * @return  bool
+     * @return bool
      */
     public function do_upload(string $field = 'userfile')
     {
@@ -122,14 +118,14 @@ class CI_Upload
     }
 
     /**
-     * Finalized Data Array
+     * Finalized Data Array.
      *
      * Returns an associative array containing all of the information
      * related to the upload, allowing the developer easy access in one array.
      *
-     * @param   string $index
+     * @param string $index
      *
-     * @return  mixed
+     * @return mixed
      */
     public function data(?string $index = null)
     {

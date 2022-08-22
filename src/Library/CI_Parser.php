@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -24,7 +24,7 @@ class CI_Parser
     private $parser;
 
     /**
-     * @return  void
+     * @return void
      */
     public function __construct(?string $viewPath = null)
     {
@@ -32,7 +32,7 @@ class CI_Parser
     }
 
     /**
-     * Parse a template
+     * Parse a template.
      *
      * Parses pseudo-variables contained in the specified template view,
      * replacing them with the data in the second param
@@ -41,7 +41,7 @@ class CI_Parser
      * @param   array
      * @param   bool
      *
-     * @return  string
+     * @return string
      */
     public function parse($template, $data, $return = false)
     {
@@ -55,7 +55,7 @@ class CI_Parser
     }
 
     /**
-     * Parse a String
+     * Parse a String.
      *
      * Parses pseudo-variables contained in the specified string,
      * replacing them with the data in the second param
@@ -64,7 +64,7 @@ class CI_Parser
      * @param   array
      * @param   bool
      *
-     * @return  string
+     * @return string
      */
     public function parse_string($template, $data, $return = false)
     {
@@ -78,12 +78,12 @@ class CI_Parser
     }
 
     /**
-     * Set the left/right variable delimiters
+     * Set the left/right variable delimiters.
      *
      * @param   string
      * @param   string
      *
-     * @return  void
+     * @return void
      */
     public function set_delimiters($l = '{', $r = '}')
     {

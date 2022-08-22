@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -34,7 +34,7 @@ trait FeatureTest
     }
 
     /**
-     * Request to Controller
+     * Request to Controller.
      *
      * @param string       $httpMethod HTTP method
      * @param array|string $argv       array of controller,method,arg|uri
@@ -46,7 +46,7 @@ trait FeatureTest
     }
 
     /**
-     * Asserts Redirect
+     * Asserts Redirect.
      *
      * @param string $uri  URI to redirect
      * @param int    $code response code
@@ -57,9 +57,7 @@ trait FeatureTest
     }
 
     /**
-     * Asserts HTTP response code
-     *
-     * @param int $code
+     * Asserts HTTP response code.
      */
     public function assertResponseCode(int $code)
     {

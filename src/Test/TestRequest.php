@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -56,7 +56,7 @@ class TestRequest
     }
 
     /**
-     * Request to Controller
+     * Request to Controller.
      *
      * @param string       $httpMethod HTTP method
      * @param array|string $argv       array of controller,method,arg|uri
@@ -82,7 +82,7 @@ class TestRequest
     }
 
     /**
-     * Set (and Reset) callable
+     * Set (and Reset) callable.
      *
      * @param callable $callable function to run after controller instantiation
      */
@@ -93,7 +93,7 @@ class TestRequest
     }
 
     /**
-     * Add callable
+     * Add callable.
      *
      * @param callable $callable function to run after controller instantiation
      */
@@ -116,7 +116,7 @@ class TestRequest
     }
 
     /**
-     * Asserts Redirect
+     * Asserts Redirect.
      *
      * @param string $uri  URI to redirect
      * @param int    $code response code

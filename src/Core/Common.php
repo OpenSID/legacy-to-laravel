@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -19,7 +19,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 if (! function_exists('show_error')) {
     /**
-     * Error Handler
+     * Error Handler.
      *
      * This function lets us invoke the exception class and
      * display errors using the standard error template located
@@ -31,7 +31,7 @@ if (! function_exists('show_error')) {
      * @param   int
      * @param   string
      *
-     * @return  void
+     * @return void
      */
     function show_error($message, $status_code = 500, $heading = '')
     {
@@ -48,8 +48,8 @@ if (! function_exists('show_error')) {
 
 if (! function_exists('show_404')) {
     /**
-     * @param   string $page      Page URI
-     * @param   bool   $log_error Whether to log the error
+     * @param string $page      Page URI
+     * @param bool   $log_error Whether to log the error
      */
     function show_404(string $page = '', bool $log_error = true): void
     {
@@ -72,14 +72,15 @@ if (! function_exists('show_404')) {
 
 if (! function_exists('log_message')) {
     /**
-     * Error Logging Interface
+     * Error Logging Interface.
      *
      * We use this as a simple mechanism to access the logging
      * class and send messages to be logged.
      *
      * @param	string	the error level: 'error', 'debug' or 'info'
      * @param	string	the error message
-     * @return	void
+     *
+     * @return void
      */
     function log_message($level, $message)
     {
@@ -91,10 +92,10 @@ if (! function_exists('html_escape')) {
     /**
      * Returns HTML escaped variable.
      *
-     * @param   mixed $var           The input string or array of strings to be escaped.
-     * @param   bool  $double_encode $double_encode set to FALSE prevents escaping twice.
+     * @param mixed $var           the input string or array of strings to be escaped
+     * @param bool  $double_encode $double_encode set to FALSE prevents escaping twice
      *
-     * @return  mixed           The escaped string or array of strings as a result.
+     * @return mixed the escaped string or array of strings as a result
      */
     function html_escape($var, bool $double_encode = true)
     {
@@ -112,10 +113,11 @@ if (! function_exists('html_escape')) {
 
 if (! function_exists('is_php')) {
     /**
-     * Determines if the current version of PHP is equal to or greater than the supplied value
+     * Determines if the current version of PHP is equal to or greater than the supplied value.
      *
      * @param	string
-     * @return	bool	TRUE if the current version is $version or higher
+     *
+     * @return bool TRUE if the current version is $version or higher
      */
     function is_php($version)
     {
@@ -134,15 +136,17 @@ if (! function_exists('is_php')) {
 
 if (! function_exists('is_really_writable')) {
     /**
-     * Tests for file writability
+     * Tests for file writability.
      *
      * is_writable() returns TRUE on Windows servers when you really can't write to
      * the file, based on the read-only attribute. is_writable() is also unreliable
      * on Unix servers if safe_mode is on.
      *
-     * @link	https://bugs.php.net/bug.php?id=54709
+     * @see	https://bugs.php.net/bug.php?id=54709
+     *
      * @param	string
-     * @return	bool
+     *
+     * @return bool
      */
     function is_really_writable($file)
     {
@@ -179,13 +183,14 @@ if (! function_exists('is_really_writable')) {
 
 if (! function_exists('get_config')) {
     /**
-     * Loads the main config.php file
+     * Loads the main config.php file.
      *
      * This function lets us grab the config file even if the Config class
      * hasn't been instantiated yet
      *
      * @param	array
-     * @return	array
+     *
+     * @return array
      */
     function &get_config(array $replace = [])
     {
@@ -229,10 +234,11 @@ if (! function_exists('get_config')) {
 
 if (! function_exists('config_item')) {
     /**
-     * Returns the specified config item
+     * Returns the specified config item.
      *
      * @param	string
-     * @return	mixed
+     *
+     * @return mixed
      */
     function config_item($item)
     {
@@ -251,9 +257,9 @@ if (! function_exists('config_item')) {
 
 if (! function_exists('get_mimes')) {
     /**
-     * Returns the MIME types array from config/mimes.php
+     * Returns the MIME types array from config/mimes.php.
      *
-     * @return	array
+     * @return array
      */
     function &get_mimes()
     {
@@ -282,7 +288,7 @@ if (! function_exists('is_https')) {
      * Determines if the application is accessed via an encrypted
      * (HTTPS) connection.
      *
-     * @return	bool
+     * @return bool
      */
     function is_https()
     {
@@ -306,7 +312,7 @@ if (! function_exists('is_cli')) {
      *
      * Test to see if a request was made from the command line.
      *
-     * @return 	bool
+     * @return bool
      */
     function is_cli()
     {
@@ -318,11 +324,12 @@ if (! function_exists('is_cli')) {
 
 if (! function_exists('set_status_header')) {
     /**
-     * Set HTTP Status Header
+     * Set HTTP Status Header.
      *
      * @param	int	the status code
      * @param	string
-     * @return	void
+     *
+     * @return void
      */
     function set_status_header($code = 200, $text = '')
     {
@@ -412,14 +419,15 @@ if (! function_exists('set_status_header')) {
 
 if (! function_exists('remove_invisible_characters')) {
     /**
-     * Remove Invisible Characters
+     * Remove Invisible Characters.
      *
      * This prevents sandwiching null characters
      * between ascii characters, like Java\0script.
      *
      * @param	string
      * @param	bool
-     * @return	string
+     *
+     * @return string
      */
     function remove_invisible_characters($str, $url_encoded = true)
     {
@@ -454,7 +462,8 @@ if (! function_exists('_stringify_attributes')) {
      *
      * @param	mixed	string, array, object
      * @param	bool
-     * @return	string
+     *
+     * @return string
      */
     function _stringify_attributes($attributes, $js = false)
     {
@@ -481,7 +490,7 @@ if (! function_exists('_stringify_attributes')) {
 
 if (! function_exists('function_usable')) {
     /**
-     * Function usable
+     * Function usable.
      *
      * Executes a function_exists() check, and if the Suhosin PHP
      * extension is loaded - checks whether the function that is
@@ -498,10 +507,12 @@ if (! function_exists('function_usable')) {
      * that version is yet to be released. This function will therefore
      * be just temporary, but would probably be kept for a few years.
      *
-     * @link	http://www.hardened-php.net/suhosin/
-     * @param	string	$function_name	Function to check for
-     * @return	bool	TRUE if the function exists and is safe to call,
-     *			FALSE otherwise.
+     * @see	http://www.hardened-php.net/suhosin/
+     *
+     * @param string $function_name Function to check for
+     *
+     * @return bool TRUE if the function exists and is safe to call,
+     *              FALSE otherwise
      */
     function function_usable($function_name)
     {

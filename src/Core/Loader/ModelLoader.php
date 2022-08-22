@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -40,8 +40,7 @@ class ModelLoader
     }
 
     /**
-     * @param mixed  $model
-     * @param string $name
+     * @param mixed $model
      */
     public function load($model, string $name = ''): void
     {
@@ -122,7 +121,7 @@ class ModelLoader
     }
 
     /**
-     * Inject Loaded Classes
+     * Inject Loaded Classes.
      */
     public function injectTo(object $obj): void
     {

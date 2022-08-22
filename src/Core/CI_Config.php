@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -24,13 +24,13 @@ class CI_Config
     private $config = [];
 
     /**
-     * Load Config File
+     * Load Config File.
      *
-     * @param   string $file            Configuration file name
-     * @param   bool   $use_sections    Whether configuration values should be loaded into their own section
-     * @param   bool   $fail_gracefully Whether to just return FALSE or display an error message
+     * @param string $file            Configuration file name
+     * @param bool   $use_sections    Whether configuration values should be loaded into their own section
+     * @param bool   $fail_gracefully Whether to just return FALSE or display an error message
      *
-     * @return  bool    TRUE if the file was loaded correctly or FALSE on failure
+     * @return bool TRUE if the file was loaded correctly or FALSE on failure
      */
     public function load(string $file = '', bool $use_sections = false, bool $fail_gracefully = false)
     {
@@ -63,12 +63,12 @@ class CI_Config
     }
 
     /**
-     * Fetch a config file item
+     * Fetch a config file item.
      *
-     * @param   string $item  Config item name
-     * @param   string $index Index name
+     * @param string $item  Config item name
+     * @param string $index Index name
      *
-     * @return  string|null The configuration item or NULL if the item doesn't exist
+     * @return string|null The configuration item or NULL if the item doesn't exist
      */
     public function item(string $item, string $index = '')
     {
@@ -80,11 +80,12 @@ class CI_Config
     }
 
     /**
-     * Set a config file item
+     * Set a config file item.
      *
-     * @param	string	$item	Config item key
-     * @param	string	$value	Config item value
-     * @return	void
+     * @param string $item  Config item key
+     * @param string $value Config item value
+     *
+     * @return void
      */
     public function set_item($item, $value)
     {

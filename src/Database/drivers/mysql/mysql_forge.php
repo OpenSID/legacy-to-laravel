@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,41 +34,44 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * MySQL Forge Class
+ * MySQL Forge Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_mysql_forge extends CI_DB_forge
 {
     /**
-     * CREATE DATABASE statement
+     * CREATE DATABASE statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_create_database = 'CREATE DATABASE %s CHARACTER SET %s COLLATE %s';
 
     /**
-     * CREATE TABLE keys flag
+     * CREATE TABLE keys flag.
      *
      * Whether table keys are created from within the
      * CREATE TABLE statement.
      *
-     * @var	bool
+     * @var bool
      */
     protected $_create_table_keys = true;
 
     /**
-     * UNSIGNED support
+     * UNSIGNED support.
      *
-     * @var	array
+     * @var array
      */
     protected $_unsigned = [
         'TINYINT',
@@ -86,19 +89,20 @@ class CI_DB_mysql_forge extends CI_DB_forge
     ];
 
     /**
-     * NULL value representation in CREATE/ALTER TABLE statements
+     * NULL value representation in CREATE/ALTER TABLE statements.
      *
-     * @var	string
+     * @var string
      */
     protected $_null = 'NULL';
 
     // --------------------------------------------------------------------
 
     /**
-     * CREATE TABLE attributes
+     * CREATE TABLE attributes.
      *
-     * @param	array	$attributes	Associative array of table attributes
-     * @return	string
+     * @param array $attributes Associative array of table attributes
+     *
+     * @return string
      */
     protected function _create_table_attr($attributes)
     {
@@ -124,12 +128,13 @@ class CI_DB_mysql_forge extends CI_DB_forge
     // --------------------------------------------------------------------
 
     /**
-     * ALTER TABLE
+     * ALTER TABLE.
      *
-     * @param	string	$alter_type	ALTER type
-     * @param	string	$table		Table name
-     * @param	mixed	$field		Column definition
-     * @return	string|string[]
+     * @param string $alter_type ALTER type
+     * @param string $table      Table name
+     * @param mixed  $field      Column definition
+     *
+     * @return string|string[]
      */
     protected function _alter_table($alter_type, $table, $field)
     {
@@ -160,10 +165,11 @@ class CI_DB_mysql_forge extends CI_DB_forge
     // --------------------------------------------------------------------
 
     /**
-     * Process column
+     * Process column.
      *
-     * @param	array	$field
-     * @return	string
+     * @param array $field
+     *
+     * @return string
      */
     protected function _process_column($field)
     {
@@ -189,10 +195,11 @@ class CI_DB_mysql_forge extends CI_DB_forge
     // --------------------------------------------------------------------
 
     /**
-     * Process indexes
+     * Process indexes.
      *
-     * @param	string	$table	(ignored)
-     * @return	string
+     * @param string $table (ignored)
+     *
+     * @return string
      */
     protected function _process_indexes($table)
     {

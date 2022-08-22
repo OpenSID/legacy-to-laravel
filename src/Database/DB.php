@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,20 +34,23 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * Initialize the database
+ * Initialize the database.
  *
  * @category  Database
- * @author    EllisLab Dev Team
- * @link      https://codeigniter.com/userguide3/database/
  *
- * @param  string|string[]  $params
- * @param  bool             $query_builder_override Determines if query builder should be used or not
+ * @author    EllisLab Dev Team
+ *
+ * @see      https://codeigniter.com/userguide3/database/
+ *
+ * @param string|string[] $params
+ * @param bool            $query_builder_override Determines if query builder should be used or not
  */
 function &DB($params = '', $query_builder_override = null)
 {
@@ -83,7 +86,7 @@ function &DB($params = '', $query_builder_override = null)
          * Database settings can be passed as discreet
          * parameters or as a data source name in the first
          * parameter. DSNs must have this prototype:
-         * $dsn = 'driver://username:password@hostname/database';
+         * $dsn = 'driver://username:password@hostname/database';.
          */
         if (($dsn = @parse_url($params)) === false) {
             show_error('Invalid DB Connection String');
@@ -136,7 +139,7 @@ function &DB($params = '', $query_builder_override = null)
         require_once dirname(__FILE__).'/DB_query_builder.php';
         if (! class_exists(__NAMESPACE__.'\CI_DB', false)) {
             /**
-             * CI_DB
+             * CI_DB.
              *
              * Acts as an alias for both CI_DB_driver and CI_DB_query_builder.
              *

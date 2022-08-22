@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -26,9 +26,9 @@ class CI_Session
     private $session;
 
     /**
-     * @param   App|array|null $params Configuration parameters
+     * @param App|array|null $params Configuration parameters
      *
-     * @return  void
+     * @return void
      */
     public function __construct($params = null)
     {
@@ -44,9 +44,7 @@ class CI_Session
     }
 
     /**
-     * For debugging
-     *
-     * @return Session
+     * For debugging.
      *
      * @internal
      */
@@ -56,14 +54,14 @@ class CI_Session
     }
 
     /**
-     * Set userdata
+     * Set userdata.
      *
      * Legacy CI_Session compatibility method
      *
-     * @param   mixed $data  Session data key or an associative array
-     * @param   mixed $value Value to store
+     * @param mixed $data  Session data key or an associative array
+     * @param mixed $value Value to store
      *
-     * @return  void
+     * @return void
      */
     public function set_userdata($data, $value = null)
     {
@@ -71,13 +69,13 @@ class CI_Session
     }
 
     /**
-     * Userdata (fetch)
+     * Userdata (fetch).
      *
      * Legacy CI_Session compatibility method
      *
-     * @param   string $key Session data key
+     * @param string $key Session data key
      *
-     * @return  mixed   Session data value or NULL if not found
+     * @return mixed Session data value or NULL if not found
      */
     public function userdata(?string $key = null)
     {
@@ -85,12 +83,12 @@ class CI_Session
     }
 
     /**
-     * __set()
+     * __set().
      *
-     * @param   string $key   Session data key
-     * @param   mixed  $value Session data value
+     * @param string $key   Session data key
+     * @param mixed  $value Session data value
      *
-     * @return  void
+     * @return void
      */
     public function __set(string $key, $value)
     {
@@ -98,11 +96,11 @@ class CI_Session
     }
 
     /**
-     * __get()
+     * __get().
      *
-     * @param   string $key 'session_id' or a session data key
+     * @param string $key 'session_id' or a session data key
      *
-     * @return  mixed
+     * @return mixed
      */
     public function __get(string $key)
     {
@@ -110,13 +108,13 @@ class CI_Session
     }
 
     /**
-     * Unset userdata
+     * Unset userdata.
      *
      * Legacy CI_Session compatibility method
      *
-     * @param   mixed $key Session data key(s)
+     * @param mixed $key Session data key(s)
      *
-     * @return  void
+     * @return void
      */
     public function unset_userdata($key)
     {
@@ -124,14 +122,14 @@ class CI_Session
     }
 
     /**
-     * Set flashdata
+     * Set flashdata.
      *
      * Legacy CI_Session compatibility method
      *
-     * @param   mixed $data  Session data key or an associative array
-     * @param   mixed $value Value to store
+     * @param mixed $data  Session data key or an associative array
+     * @param mixed $value Value to store
      *
-     * @return  void
+     * @return void
      */
     public function set_flashdata($data, $value = null)
     {
@@ -139,13 +137,13 @@ class CI_Session
     }
 
     /**
-     * Flashdata (fetch)
+     * Flashdata (fetch).
      *
      * Legacy CI_Session compatibility method
      *
-     * @param   string $key Session data key
+     * @param string $key Session data key
      *
-     * @return  mixed   Session data value or NULL if not found
+     * @return mixed Session data value or NULL if not found
      */
     public function flashdata(?string $key = null)
     {
@@ -153,11 +151,9 @@ class CI_Session
     }
 
     /**
-     * Session destroy
+     * Session destroy.
      *
      * Legacy CI_Session compatibility method
-     *
-     * @return  void
      */
     public function sess_destroy(): void
     {

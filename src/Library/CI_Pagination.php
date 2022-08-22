@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -29,11 +29,11 @@ class CI_Pagination
     private $pagerConfig;
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param   PagerConfig|array|null $params Initialization parameters
+     * @param PagerConfig|array|null $params Initialization parameters
      *
-     * @return  void
+     * @return void
      */
     public function __construct($params = null)
     {
@@ -55,11 +55,11 @@ class CI_Pagination
     }
 
     /**
-     * Initialize Preferences
+     * Initialize Preferences.
      *
-     * @param   array $params Initialization parameters
+     * @param array $params Initialization parameters
      *
-     * @return  CI_Pagination
+     * @return CI_Pagination
      */
     public function initialize(array $params = []): self
     {
@@ -121,9 +121,7 @@ class CI_Pagination
     }
 
     /**
-     * Generate the pagination links
-     *
-     * @return  string
+     * Generate the pagination links.
      */
     public function create_links(): string
     {

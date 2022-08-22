@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -73,21 +73,21 @@ class CI_Lang
     ];
 
     /**
-     * List of language folder paths
+     * List of language folder paths.
      *
      * @var string[]
      */
     private $langPaths;
 
     /**
-     * List of translations
+     * List of translations.
      *
      * @var array
      */
     private $language = [];
 
     /**
-     * List of loaded language files
+     * List of loaded language files.
      *
      * @var array
      */
@@ -112,15 +112,15 @@ class CI_Lang
     }
 
     /**
-     * Load a language file
+     * Load a language file.
      *
-     * @param   mixed  $langfile   Language file name
-     * @param   string $idiom      Language name (english, etc.)
-     * @param   bool   $return     Whether to return the loaded array of translations
-     * @param   bool   $add_suffix Whether to add suffix to $langfile
-     * @param   string $alt_path   Alternative path to look for the language file
+     * @param mixed  $langfile   Language file name
+     * @param string $idiom      Language name (english, etc.)
+     * @param bool   $return     Whether to return the loaded array of translations
+     * @param bool   $add_suffix Whether to add suffix to $langfile
+     * @param string $alt_path   Alternative path to look for the language file
      *
-     * @return  void|bool|string[]   Array containing translations, if $return is set to TRUE
+     * @return void|bool|string[] Array containing translations, if $return is set to TRUE
      */
     public function load(
         $langfile,
@@ -224,14 +224,14 @@ class CI_Lang
     }
 
     /**
-     * Language line
+     * Language line.
      *
      * Fetches a single line of text from the language array
      *
-     * @param   string $line       Language line key
-     * @param   bool   $log_errors Whether to log an error message if the line is not found
+     * @param string $line       Language line key
+     * @param bool   $log_errors Whether to log an error message if the line is not found
      *
-     * @return  string|false  Translation
+     * @return string|false Translation
      */
     public function line(string $line, bool $log_errors = true)
     {

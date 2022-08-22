@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -39,9 +39,9 @@ class HelperLoader
     private $loadedHelpers = [];
 
     /**
-     * Helper Loader
+     * Helper Loader.
      *
-     * @param   string|string[] $helpers Helper name(s)
+     * @param string|string[] $helpers Helper name(s)
      */
     public function load($helpers): void
     {
@@ -88,7 +88,7 @@ class HelperLoader
     }
 
     /**
-     * Load CI4 helper
+     * Load CI4 helper.
      *
      * Returns bool for mocking this method.
      * Must be protected for mocking this method.

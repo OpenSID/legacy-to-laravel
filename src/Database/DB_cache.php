@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,44 +34,48 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * Database Cache Class
+ * Database Cache Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_Cache
 {
     /**
-     * CI Singleton
+     * CI Singleton.
      *
-     * @var	object
+     * @var object
      */
     public $CI;
 
     /**
-     * Database object
+     * Database object.
      *
      * Allows passing of DB object so that multiple database connections
      * and returned DB objects can be supported.
      *
-     * @var	object
+     * @var object
      */
     public $db;
 
     // --------------------------------------------------------------------
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param	object	&$db
-     * @return	void
+     * @param object &$db
+     *
+     * @return void
      */
     public function __construct(&$db)
     {
@@ -86,10 +90,11 @@ class CI_DB_Cache
     // --------------------------------------------------------------------
 
     /**
-     * Set Cache Directory Path
+     * Set Cache Directory Path.
      *
-     * @param	string	$path	Path to the cache directory
-     * @return	bool
+     * @param string $path Path to the cache directory
+     *
+     * @return bool
      */
     public function check_path($path = '')
     {
@@ -128,13 +133,14 @@ class CI_DB_Cache
     // --------------------------------------------------------------------
 
     /**
-     * Retrieve a cached query
+     * Retrieve a cached query.
      *
      * The URI being requested will become the name of the cache sub-folder.
      * An MD5 hash of the SQL statement will become the cache file name.
      *
-     * @param	string	$sql
-     * @return	string
+     * @param string $sql
+     *
+     * @return string
      */
     public function read($sql)
     {
@@ -152,11 +158,12 @@ class CI_DB_Cache
     // --------------------------------------------------------------------
 
     /**
-     * Write a query to a cache file
+     * Write a query to a cache file.
      *
-     * @param	string	$sql
-     * @param	object	$object
-     * @return	bool
+     * @param string $sql
+     * @param object $object
+     *
+     * @return bool
      */
     public function write($sql, $object)
     {
@@ -181,11 +188,12 @@ class CI_DB_Cache
     // --------------------------------------------------------------------
 
     /**
-     * Delete cache files within a particular directory
+     * Delete cache files within a particular directory.
      *
-     * @param	string	$segment_one
-     * @param	string	$segment_two
-     * @return	void
+     * @param string $segment_one
+     * @param string $segment_two
+     *
+     * @return void
      */
     public function delete($segment_one = '', $segment_two = '')
     {
@@ -204,9 +212,9 @@ class CI_DB_Cache
     // --------------------------------------------------------------------
 
     /**
-     * Delete all existing cache files
+     * Delete all existing cache files.
      *
-     * @return	void
+     * @return void
      */
     public function delete_all()
     {

@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,48 +34,52 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * MySQL Utility Class
+ * MySQL Utility Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_mysql_utility extends CI_DB_utility
 {
     /**
-     * List databases statement
+     * List databases statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_list_databases = 'SHOW DATABASES';
 
     /**
-     * OPTIMIZE TABLE statement
+     * OPTIMIZE TABLE statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_optimize_table = 'OPTIMIZE TABLE %s';
 
     /**
-     * REPAIR TABLE statement
+     * REPAIR TABLE statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_repair_table = 'REPAIR TABLE %s';
 
     // --------------------------------------------------------------------
 
     /**
-     * Export
+     * Export.
      *
-     * @param	array	$params	Preferences
-     * @return	mixed
+     * @param array $params Preferences
+     *
+     * @return mixed
      */
     protected function _backup($params = [])
     {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -70,7 +70,7 @@ class CoreLoader
     }
 
     /**
-     * Inject Core Classes w/o CI_Loader to Controller
+     * Inject Core Classes w/o CI_Loader to Controller.
      */
     public function injectToController(ControllerPropertyInjector $injector): void
     {
@@ -79,7 +79,7 @@ class CoreLoader
     }
 
     /**
-     * Inject Core Classes
+     * Inject Core Classes.
      */
     public function injectTo(object $obj): void
     {

@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,65 +34,69 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 3.0.0
  * @filesource
  */
 
 /**
- * PDO MySQL Database Adapter Class
+ * PDO MySQL Database Adapter Class.
  *
  * Note: _DB is an extender class that the app controller
  * creates dynamically based on whether the query builder
  * class is being used or not.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
 {
     /**
-     * Sub-driver
+     * Sub-driver.
      *
-     * @var	string
+     * @var string
      */
     public $subdriver = 'mysql';
 
     /**
-     * Compression flag
+     * Compression flag.
      *
-     * @var	bool
+     * @var bool
      */
     public $compress = false;
 
     /**
-     * Strict ON flag
+     * Strict ON flag.
      *
      * Whether we're running in strict SQL mode.
      *
-     * @var	bool
+     * @var bool
      */
     public $stricton;
 
     // --------------------------------------------------------------------
 
     /**
-     * Identifier escape character
+     * Identifier escape character.
      *
-     * @var	string
+     * @var string
      */
     protected $_escape_char = '`';
 
     // --------------------------------------------------------------------
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * Builds the DSN if not already set.
      *
-     * @param	array	$params
-     * @return	void
+     * @param array $params
+     *
+     * @return void
      */
     public function __construct($params)
     {
@@ -112,10 +116,11 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Database connection
+     * Database connection.
      *
-     * @param	bool	$persistent
-     * @return	object
+     * @param bool $persistent
+     *
+     * @return object
      */
     public function db_connect($persistent = false)
     {
@@ -182,10 +187,11 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Select the database
+     * Select the database.
      *
-     * @param	string	$database
-     * @return	bool
+     * @param string $database
+     *
+     * @return bool
      */
     public function db_select($database = '')
     {
@@ -206,9 +212,9 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Begin Transaction
+     * Begin Transaction.
      *
-     * @return	bool
+     * @return bool
      */
     protected function _trans_begin()
     {
@@ -220,9 +226,9 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Commit Transaction
+     * Commit Transaction.
      *
-     * @return	bool
+     * @return bool
      */
     protected function _trans_commit()
     {
@@ -238,9 +244,9 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Rollback Transaction
+     * Rollback Transaction.
      *
-     * @return	bool
+     * @return bool
      */
     protected function _trans_rollback()
     {
@@ -256,12 +262,13 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Show table query
+     * Show table query.
      *
      * Generates a platform-specific query string so that the table names can be fetched
      *
-     * @param	bool	$prefix_limit
-     * @return	string
+     * @param bool $prefix_limit
+     *
+     * @return string
      */
     protected function _list_tables($prefix_limit = false)
     {
@@ -277,12 +284,13 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Show column query
+     * Show column query.
      *
      * Generates a platform-specific query string so that the column names can be fetched
      *
-     * @param	string	$table
-     * @return	string
+     * @param string $table
+     *
+     * @return string
      */
     protected function _list_columns($table = '')
     {
@@ -292,10 +300,11 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Returns an object with field data
+     * Returns an object with field data.
      *
-     * @param	string	$table
-     * @return	array
+     * @param string $table
+     *
+     * @return array
      */
     public function field_data($table)
     {
@@ -324,15 +333,16 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * Truncate statement
+     * Truncate statement.
      *
      * Generates a platform-specific truncate string from the supplied data
      *
      * If the database does not support the TRUNCATE statement,
      * then this method maps to 'DELETE FROM table'
      *
-     * @param	string	$table
-     * @return	string
+     * @param string $table
+     *
+     * @return string
      */
     protected function _truncate($table)
     {
@@ -342,12 +352,12 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver
     // --------------------------------------------------------------------
 
     /**
-     * FROM tables
+     * FROM tables.
      *
      * Groups tables in FROM clauses if needed, so there is no confusion
      * about operator precedence.
      *
-     * @return	string
+     * @return string
      */
     protected function _from_tables()
     {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -34,11 +34,11 @@ class CI_Form_validation
     private $request;
 
     /**
-     * Initialize Form_Validation class
+     * Initialize Form_Validation class.
      *
-     * @param   ConfigValidation|array|null $rules
+     * @param ConfigValidation|array|null $rules
      *
-     * @return  void
+     * @return void
      */
     public function __construct($config = null)
     {
@@ -65,18 +65,15 @@ class CI_Form_validation
     }
 
     /**
-     * Set Rules
+     * Set Rules.
      *
      * This function takes an array of field names and validation
      * rules as input, any custom error messages, validates the info,
      * and stores it
      *
-     * @param   mixed  $field
-     * @param   string $label
-     * @param   mixed  $rules
-     * @param   array  $errors
-     *
-     * @return  CI_Form_validation
+     * @param mixed  $field
+     * @param string $label
+     * @param mixed  $rules
      */
     public function set_rules(
         $field,
@@ -97,9 +94,7 @@ class CI_Form_validation
     }
 
     /**
-     * For debugging
-     *
-     * @return Validation
+     * For debugging.
      *
      * @internal
      */
@@ -118,14 +113,14 @@ class CI_Form_validation
     }
 
     /**
-     * Set The Error Delimiter
+     * Set The Error Delimiter.
      *
      * Permits a prefix/suffix to be added to each error message
      *
      * @param   string
      * @param   string
      *
-     * @return  CI_Form_validation
+     * @return CI_Form_validation
      */
     public function set_error_delimiters(): void
     {
@@ -137,7 +132,7 @@ class CI_Form_validation
     }
 
     /**
-     * Set Error Message
+     * Set Error Message.
      *
      * Lets users set their own error messages on the fly. Note:
      * The key name has to match the function name that it corresponds to.
@@ -145,7 +140,7 @@ class CI_Form_validation
      * @param   array
      * @param   string
      *
-     * @return  CI_Form_validation
+     * @return CI_Form_validation
      */
     public function set_message(): void
     {
@@ -159,9 +154,6 @@ class CI_Form_validation
      * CI4 method
      * Sets the error for a specific field. Used by custom validation methods.
      *
-     * @param string $field
-     * @param string $error
-     *
      * @return CI_Form_validation
      */
     public function setError(string $field, string $error): self
@@ -172,14 +164,12 @@ class CI_Form_validation
     }
 
     /**
-     * Run the Validator
+     * Run the Validator.
      *
      * This function does all the work.
      *
-     * @param   string $config
-     * @param   array  $data
-     *
-     * @return  bool
+     * @param string $config
+     * @param array  $data
      */
     public function run(?string $config = null, ?array &$data = null): bool
     {
@@ -202,12 +192,12 @@ class CI_Form_validation
     }
 
     /**
-     * Reset validation vars
+     * Reset validation vars.
      *
      * Prevents subsequent validation routines from being affected by the
      * results of any previous validation routine due to the CI singleton.
      *
-     * @return  CI_Form_validation
+     * @return CI_Form_validation
      */
     public function reset_validation(): self
     {
@@ -218,11 +208,9 @@ class CI_Form_validation
     }
 
     /**
-     * Get Array of Error Messages
+     * Get Array of Error Messages.
      *
      * Returns the error messages as an array
-     *
-     * @return  array
      */
     public function error_array(): array
     {
@@ -230,14 +218,14 @@ class CI_Form_validation
     }
 
     /**
-     * Error String
+     * Error String.
      *
      * Returns the error messages as a string, wrapped in the error delimiters
      *
      * @param   string
      * @param   string
      *
-     * @return  string
+     * @return string
      */
     public function error_string()
     {

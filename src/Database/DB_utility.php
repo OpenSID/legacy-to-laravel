@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,57 +34,61 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * Database Utility Class
+ * Database Utility Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 abstract class CI_DB_utility
 {
     /**
-     * Database object
+     * Database object.
      *
-     * @var	object
+     * @var object
      */
     protected $db;
 
     // --------------------------------------------------------------------
 
     /**
-     * List databases statement
+     * List databases statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_list_databases = false;
 
     /**
-     * OPTIMIZE TABLE statement
+     * OPTIMIZE TABLE statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_optimize_table = false;
 
     /**
-     * REPAIR TABLE statement
+     * REPAIR TABLE statement.
      *
-     * @var	string
+     * @var string
      */
     protected $_repair_table = false;
 
     // --------------------------------------------------------------------
 
     /**
-     * Class constructor
+     * Class constructor.
      *
-     * @param	object	&$db	Database object
-     * @return	void
+     * @param object &$db Database object
+     *
+     * @return void
      */
     public function __construct(&$db)
     {
@@ -95,9 +99,9 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * List databases
+     * List databases.
      *
-     * @return	array
+     * @return array
      */
     public function list_databases()
     {
@@ -125,10 +129,11 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Determine if a particular database exists
+     * Determine if a particular database exists.
      *
-     * @param	string	$database_name
-     * @return	bool
+     * @param string $database_name
+     *
+     * @return bool
      */
     public function database_exists($database_name)
     {
@@ -138,10 +143,11 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Optimize Table
+     * Optimize Table.
      *
-     * @param	string	$table_name
-     * @return	mixed
+     * @param string $table_name
+     *
+     * @return mixed
      */
     public function optimize_table($table_name)
     {
@@ -162,9 +168,9 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Optimize Database
+     * Optimize Database.
      *
-     * @return	mixed
+     * @return mixed
      */
     public function optimize_database()
     {
@@ -195,10 +201,11 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Repair Table
+     * Repair Table.
      *
-     * @param	string	$table_name
-     * @return	mixed
+     * @param string $table_name
+     *
+     * @return mixed
      */
     public function repair_table($table_name)
     {
@@ -219,13 +226,14 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Generate CSV from a query result object
+     * Generate CSV from a query result object.
      *
-     * @param	object	$query		Query result object
-     * @param	string	$delim		Delimiter (default: ,)
-     * @param	string	$newline	Newline character (default: \n)
-     * @param	string	$enclosure	Enclosure (default: ")
-     * @return	string
+     * @param object $query     Query result object
+     * @param string $delim     Delimiter (default: ,)
+     * @param string $newline   Newline character (default: \n)
+     * @param string $enclosure Enclosure (default: ")
+     *
+     * @return string
      */
     public function csv_from_result($query, $delim = ',', $newline = "\n", $enclosure = '"')
     {
@@ -256,11 +264,12 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Generate XML data from a query result object
+     * Generate XML data from a query result object.
      *
-     * @param	object	$query	Query result object
-     * @param	array	$params	Any preferences
-     * @return	string
+     * @param object $query  Query result object
+     * @param array  $params Any preferences
+     *
+     * @return string
      */
     public function xml_from_result($query, $params = [])
     {
@@ -297,10 +306,11 @@ abstract class CI_DB_utility
     // --------------------------------------------------------------------
 
     /**
-     * Database Backup
+     * Database Backup.
      *
-     * @param	array	$params
-     * @return	string
+     * @param array $params
+     *
+     * @return string
      */
     public function backup($params = [])
     {

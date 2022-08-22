@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -16,7 +16,7 @@ declare(strict_types=1);
 namespace Fluent\Legacy\Traits\View;
 
 /**
- * Use in app/Config/View.php
+ * Use in app/Config/View.php.
  *
  * If you use `$this->config` in view files, you need this.
  */

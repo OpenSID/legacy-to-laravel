@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -20,12 +20,10 @@ use Fluent\Legacy\Exception\NotSupportedException;
 
 if (! function_exists('base_url_')) {
     /**
-     * Return the base URL without rtrim('/')
+     * Return the base URL without rtrim('/').
      *
-     * @param  mixed  $uri      URI string or array of URI segments
-     * @param  string $protocol
-     *
-     * @return string
+     * @param mixed  $uri      URI string or array of URI segments
+     * @param string $protocol
      */
     function base_url_($uri = '', ?string $protocol = null): string
     {
@@ -69,18 +67,18 @@ if (! function_exists('base_url_')) {
 
 if (! function_exists('redirect_')) {
     /**
-     * Header Redirect
+     * Header Redirect.
      *
      * Header redirect in two flavors
      * For very fine grained control over headers, you could use the Output
      * Library's set_header() function.
      *
-     * @param   string $uri    URL
-     * @param   string $method Redirect method
-     *         'auto', 'location' or 'refresh'
-     * @param   int    $code   HTTP Response status code
+     * @param string $uri    URL
+     * @param string $method Redirect method
+     *                       'auto', 'location' or 'refresh'
+     * @param int    $code   HTTP Response status code
      *
-     * @return  void
+     * @return void
      */
     function redirect_(string $uri = '', string $method = 'auto', ?int $code = null)
     {

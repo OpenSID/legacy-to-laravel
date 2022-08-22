@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -53,13 +53,13 @@ class CI_Email
     ];
 
     /**
-     * Constructor - Sets Email Preferences
+     * Constructor - Sets Email Preferences.
      *
      * The constructor can be passed an array of config values
      *
-     * @param   EmailConfig|array|null $config = array()
+     * @param EmailConfig|array|null $config = array()
      *
-     * @return  void
+     * @return void
      */
     public function __construct($config = null)
     {
@@ -67,9 +67,7 @@ class CI_Email
     }
 
     /**
-     * For debugging
-     *
-     * @return Email
+     * For debugging.
      *
      * @internal
      */
@@ -79,11 +77,9 @@ class CI_Email
     }
 
     /**
-     * Initialize preferences
+     * Initialize preferences.
      *
-     * @param   array $config
-     *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function initialize(array $config = []): self
     {
@@ -109,13 +105,11 @@ class CI_Email
     }
 
     /**
-     * Set FROM
+     * Set FROM.
      *
-     * @param   string $from
-     * @param   string $name
-     * @param   string $return_path = NULL Return-Path
+     * @param string $return_path = NULL Return-Path
      *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function from(
         string $from,
@@ -128,11 +122,11 @@ class CI_Email
     }
 
     /**
-     * Set Recipients
+     * Set Recipients.
      *
      * @param   array|string
      *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function to($to): self
     {
@@ -142,12 +136,12 @@ class CI_Email
     }
 
     /**
-     * Set BCC
+     * Set BCC.
      *
      * @param   string
      * @param   string
      *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function bcc($bcc, $limit = ''): self
     {
@@ -157,11 +151,11 @@ class CI_Email
     }
 
     /**
-     * Set Email Subject
+     * Set Email Subject.
      *
      * @param   string
      *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function subject(string $subject): self
     {
@@ -171,11 +165,11 @@ class CI_Email
     }
 
     /**
-     * Set Body
+     * Set Body.
      *
      * @param   string
      *
-     * @return  CI_Email
+     * @return CI_Email
      */
     public function message(string $body): self
     {
@@ -185,11 +179,9 @@ class CI_Email
     }
 
     /**
-     * Send Email
+     * Send Email.
      *
-     * @param   bool $auto_clear = TRUE
-     *
-     * @return  bool
+     * @param bool $auto_clear = TRUE
      */
     public function send(bool $auto_clear = true): bool
     {
@@ -197,12 +189,10 @@ class CI_Email
     }
 
     /**
-     * Get Debug Message
+     * Get Debug Message.
      *
-     * @param   array $include List of raw data chunks to include in the output
-     *             Valid options are: 'headers', 'subject', 'body'
-     *
-     * @return  string
+     * @param array $include List of raw data chunks to include in the output
+     *                       Valid options are: 'headers', 'subject', 'body'
      */
     public function print_debugger(
         array $include = ['headers', 'subject', 'body']

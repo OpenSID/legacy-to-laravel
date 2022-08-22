@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,87 +34,91 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * Database Result Class
+ * Database Result Class.
  *
  * This is the platform-independent result class.
  * This class will not be called directly. Rather, the adapter
  * class for the specific database will extend and instantiate it.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_result
 {
     /**
-     * Connection ID
+     * Connection ID.
      *
-     * @var	resource|object
+     * @var resource|object
      */
     public $conn_id;
 
     /**
-     * Result ID
+     * Result ID.
      *
-     * @var	resource|object
+     * @var resource|object
      */
     public $result_id;
 
     /**
-     * Result Array
+     * Result Array.
      *
-     * @var	array[]
+     * @var array[]
      */
     public $result_array = [];
 
     /**
-     * Result Object
+     * Result Object.
      *
-     * @var	object[]
+     * @var object[]
      */
     public $result_object = [];
 
     /**
-     * Custom Result Object
+     * Custom Result Object.
      *
-     * @var	object[]
+     * @var object[]
      */
     public $custom_result_object = [];
 
     /**
-     * Current Row index
+     * Current Row index.
      *
-     * @var	int
+     * @var int
      */
     public $current_row = 0;
 
     /**
-     * Number of rows
+     * Number of rows.
      *
-     * @var	int
+     * @var int
      */
     public $num_rows;
 
     /**
-     * Row data
+     * Row data.
      *
-     * @var	array
+     * @var array
      */
     public $row_data;
 
     // --------------------------------------------------------------------
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param	object	$driver_object
-     * @return	void
+     * @param object $driver_object
+     *
+     * @return void
      */
     public function __construct(&$driver_object)
     {
@@ -125,9 +129,9 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Number of rows in the result set
+     * Number of rows in the result set.
      *
-     * @return	int
+     * @return int
      */
     public function num_rows()
     {
@@ -147,8 +151,9 @@ class CI_DB_result
     /**
      * Query result. Acts as a wrapper function for the following functions.
      *
-     * @param	string	$type	'object', 'array' or a custom class name
-     * @return	array
+     * @param string $type 'object', 'array' or a custom class name
+     *
+     * @return array
      */
     public function result($type = 'object')
     {
@@ -166,8 +171,9 @@ class CI_DB_result
     /**
      * Custom query result.
      *
-     * @param	string	$class_name
-     * @return	array
+     * @param string $class_name
+     *
+     * @return array
      */
     public function custom_result_object($class_name)
     {
@@ -212,7 +218,7 @@ class CI_DB_result
     /**
      * Query result. "object" version.
      *
-     * @return	array
+     * @return array
      */
     public function result_object()
     {
@@ -248,7 +254,7 @@ class CI_DB_result
     /**
      * Query result. "array" version.
      *
-     * @return	array
+     * @return array
      */
     public function result_array()
     {
@@ -282,13 +288,14 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Row
+     * Row.
      *
      * A wrapper method.
      *
-     * @param	mixed	$n
-     * @param	string	$type	'object' or 'array'
-     * @return	mixed
+     * @param mixed  $n
+     * @param string $type 'object' or 'array'
+     *
+     * @return mixed
      */
     public function row($n = 0, $type = 'object')
     {
@@ -316,11 +323,12 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Assigns an item into a particular column slot
+     * Assigns an item into a particular column slot.
      *
-     * @param	mixed	$key
-     * @param	mixed	$value
-     * @return	void
+     * @param mixed $key
+     * @param mixed $value
+     *
+     * @return void
      */
     public function set_row($key, $value = null)
     {
@@ -345,11 +353,12 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns a single result row - custom object version
+     * Returns a single result row - custom object version.
      *
-     * @param	int	$n
-     * @param	string	$type
-     * @return	object
+     * @param int    $n
+     * @param string $type
+     *
+     * @return object
      */
     public function custom_row_object($n, $type)
     {
@@ -369,10 +378,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns a single result row - object version
+     * Returns a single result row - object version.
      *
-     * @param	int	$n
-     * @return	object
+     * @param int $n
+     *
+     * @return object
      */
     public function row_object($n = 0)
     {
@@ -391,10 +401,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns a single result row - array version
+     * Returns a single result row - array version.
      *
-     * @param	int	$n
-     * @return	array
+     * @param int $n
+     *
+     * @return array
      */
     public function row_array($n = 0)
     {
@@ -413,10 +424,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns the "first" row
+     * Returns the "first" row.
      *
-     * @param	string	$type
-     * @return	mixed
+     * @param string $type
+     *
+     * @return mixed
      */
     public function first_row($type = 'object')
     {
@@ -428,10 +440,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns the "last" row
+     * Returns the "last" row.
      *
-     * @param	string	$type
-     * @return	mixed
+     * @param string $type
+     *
+     * @return mixed
      */
     public function last_row($type = 'object')
     {
@@ -443,10 +456,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns the "next" row
+     * Returns the "next" row.
      *
-     * @param	string	$type
-     * @return	mixed
+     * @param string $type
+     *
+     * @return mixed
      */
     public function next_row($type = 'object')
     {
@@ -463,10 +477,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns the "previous" row
+     * Returns the "previous" row.
      *
-     * @param	string	$type
-     * @return	mixed
+     * @param string $type
+     *
+     * @return mixed
      */
     public function previous_row($type = 'object')
     {
@@ -485,10 +500,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Returns an unbuffered row and move pointer to next row
+     * Returns an unbuffered row and move pointer to next row.
      *
-     * @param	string	$type	'array', 'object' or a custom class name
-     * @return	mixed
+     * @param string $type 'array', 'object' or a custom class name
+     *
+     * @return mixed
      */
     public function unbuffered_row($type = 'object')
     {
@@ -516,11 +532,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Number of fields in the result set
+     * Number of fields in the result set.
      *
      * Overridden by driver result classes.
      *
-     * @return	int
+     * @return int
      */
     public function num_fields()
     {
@@ -530,13 +546,13 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Fetch Field Names
+     * Fetch Field Names.
      *
      * Generates an array of column names.
      *
      * Overridden by driver result classes.
      *
-     * @return	array
+     * @return array
      */
     public function list_fields()
     {
@@ -546,13 +562,13 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Field data
+     * Field data.
      *
      * Generates an array of objects containing field meta-data.
      *
      * Overridden by driver result classes.
      *
-     * @return	array
+     * @return array
      */
     public function field_data()
     {
@@ -562,11 +578,11 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Free the result
+     * Free the result.
      *
      * Overridden by driver result classes.
      *
-     * @return	void
+     * @return void
      */
     public function free_result()
     {
@@ -576,7 +592,7 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Data Seek
+     * Data Seek.
      *
      * Moves the internal pointer to the desired offset. We call
      * this internally before fetching results to make sure the
@@ -584,8 +600,9 @@ class CI_DB_result
      *
      * Overridden by driver result classes.
      *
-     * @param	int	$n
-     * @return	bool
+     * @param int $n
+     *
+     * @return bool
      */
     public function data_seek($n = 0)
     {
@@ -595,13 +612,13 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Result - associative array
+     * Result - associative array.
      *
      * Returns the result set as an array.
      *
      * Overridden by driver result classes.
      *
-     * @return	array
+     * @return array
      */
     protected function _fetch_assoc()
     {
@@ -611,14 +628,15 @@ class CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Result - object
+     * Result - object.
      *
      * Returns the result set as an object.
      *
      * Overridden by driver result classes.
      *
-     * @param	string	$class_name
-     * @return	object
+     * @param string $class_name
+     *
+     * @return object
      */
     protected function _fetch_object($class_name = 'stdClass')
     {

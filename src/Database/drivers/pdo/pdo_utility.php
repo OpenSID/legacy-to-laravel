@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,25 +34,29 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 2.1.0
  * @filesource
  */
 
 /**
- * PDO Utility Class
+ * PDO Utility Class.
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/database/
+ *
+ * @see		https://codeigniter.com/database/
  */
 class CI_DB_pdo_utility extends CI_DB_utility
 {
     /**
-     * Export
+     * Export.
      *
-     * @param	array	$params	Preferences
-     * @return	mixed
+     * @param array $params Preferences
+     *
+     * @return mixed
      */
     protected function _backup($params = [])
     {

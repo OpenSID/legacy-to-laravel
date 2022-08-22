@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -30,12 +30,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from the GET array
+     * Fetch an item from the GET array.
      *
-     * @param   mixed $index     Index for item to be fetched from $_GET
-     * @param   bool  $xss_clean Whether to apply XSS filtering
+     * @param mixed $index     Index for item to be fetched from $_GET
+     * @param bool  $xss_clean Whether to apply XSS filtering
      *
-     * @return  mixed
+     * @return mixed
      */
     public function get($index = null, bool $xss_clean = false)
     {
@@ -45,12 +45,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from the POST array
+     * Fetch an item from the POST array.
      *
-     * @param   mixed $index     Index for item to be fetched from $_POST
-     * @param   bool  $xss_clean Whether to apply XSS filtering
+     * @param mixed $index     Index for item to be fetched from $_POST
+     * @param bool  $xss_clean Whether to apply XSS filtering
      *
-     * @return  mixed
+     * @return mixed
      */
     public function post($index = null, bool $xss_clean = false)
     {
@@ -60,11 +60,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from POST data with fallback to GET
+     * Fetch an item from POST data with fallback to GET.
      *
-     * @param   string  $index      Index for item to be fetched from $_POST or $_GET
-     * @param   bool    $xss_clean  Whether to apply XSS filtering
-     * @return  mixed
+     * @param string $index     Index for item to be fetched from $_POST or $_GET
+     * @param bool   $xss_clean Whether to apply XSS filtering
+     *
+     * @return mixed
      */
     public function post_get($index, $xss_clean = false)
     {
@@ -74,11 +75,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from GET data with fallback to POST
+     * Fetch an item from GET data with fallback to POST.
      *
-     * @param   string  $index      Index for item to be fetched from $_GET or $_POST
-     * @param   bool    $xss_clean  Whether to apply XSS filtering
-     * @return  mixed
+     * @param string $index     Index for item to be fetched from $_GET or $_POST
+     * @param bool   $xss_clean Whether to apply XSS filtering
+     *
+     * @return mixed
      */
     public function get_post($index, $xss_clean = false)
     {
@@ -88,11 +90,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from the COOKIE array
+     * Fetch an item from the COOKIE array.
      *
-     * @param   mixed   $index      Index for item to be fetched from $_COOKIE
-     * @param   bool    $xss_clean  Whether to apply XSS filtering
-     * @return  mixed
+     * @param mixed $index     Index for item to be fetched from $_COOKIE
+     * @param bool  $xss_clean Whether to apply XSS filtering
+     *
+     * @return mixed
      */
     public function cookie($index = null, $xss_clean = false)
     {
@@ -100,12 +103,12 @@ class CI_Input
     }
 
     /**
-     * Fetch an item from the SERVER array
+     * Fetch an item from the SERVER array.
      *
-     * @param   mixed $index     Index for item to be fetched from $_SERVER
-     * @param   bool  $xss_clean Whether to apply XSS filtering
+     * @param mixed $index     Index for item to be fetched from $_SERVER
+     * @param bool  $xss_clean Whether to apply XSS filtering
      *
-     * @return  mixed
+     * @return mixed
      */
     public function server($index = null, bool $xss_clean = false)
     {
@@ -115,21 +118,22 @@ class CI_Input
     }
 
     /**
-     * Set cookie
+     * Set cookie.
      *
      * Accepts an arbitrary number of parameters (up to 7) or an associative
      * array in the first parameter containing all the values.
      *
-     * @param	string|mixed[]	$name		Cookie name or an array containing parameters
-     * @param	string		$value		Cookie value
-     * @param	int		$expire		Cookie expiration time in seconds
-     * @param	string		$domain		Cookie domain (e.g.: '.yourdomain.com')
-     * @param	string		$path		Cookie path (default: '/')
-     * @param	string		$prefix		Cookie name prefix
-     * @param	bool		$secure		Whether to only transfer cookies via SSL
-     * @param	bool		$httponly	Whether to only makes the cookie accessible via HTTP (no javascript)
-     * @param	string		$samesite	SameSite attribute
-     * @return	void
+     * @param string|mixed[] $name     Cookie name or an array containing parameters
+     * @param string         $value    Cookie value
+     * @param int            $expire   Cookie expiration time in seconds
+     * @param string         $domain   Cookie domain (e.g.: '.yourdomain.com')
+     * @param string         $path     Cookie path (default: '/')
+     * @param string         $prefix   Cookie name prefix
+     * @param bool           $secure   Whether to only transfer cookies via SSL
+     * @param bool           $httponly Whether to only makes the cookie accessible via HTTP (no javascript)
+     * @param string         $samesite SameSite attribute
+     *
+     * @return void
      */
     public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = null, $httponly = null, $samesite = null)
     {
@@ -137,11 +141,11 @@ class CI_Input
     }
 
     /**
-     * Fetch the IP Address
+     * Fetch the IP Address.
      *
      * Determines and validates the visitor's IP address.
      *
-     * @return	string	IP address
+     * @return string IP address
      */
     public function ip_address()
     {
@@ -149,11 +153,12 @@ class CI_Input
     }
 
     /**
-     * Validate IP Address
+     * Validate IP Address.
      *
-     * @param	string	$ip	IP address
-     * @param	string	$which	IP protocol: 'ipv4' or 'ipv6'
-     * @return	bool
+     * @param string $ip    IP address
+     * @param string $which IP protocol: 'ipv4' or 'ipv6'
+     *
+     * @return bool
      */
     public function valid_ip($ip, $which = '')
     {
@@ -173,9 +178,9 @@ class CI_Input
     }
 
     /**
-     * Fetch User Agent string
+     * Fetch User Agent string.
      *
-     * @return	string|null	User Agent string or NULL if it doesn't exist
+     * @return string|null User Agent string or NULL if it doesn't exist
      */
     public function user_agent($xss_clean = false)
     {
@@ -185,10 +190,11 @@ class CI_Input
     }
 
     /**
-     * Request Headers
+     * Request Headers.
      *
-     * @param	bool	$xss_clean	Whether to apply XSS filtering
-     * @return	array
+     * @param bool $xss_clean Whether to apply XSS filtering
+     *
+     * @return array
      */
     public function request_headers($xss_clean = false)
     {
@@ -198,13 +204,14 @@ class CI_Input
     }
 
     /**
-     * Get Request Header
+     * Get Request Header.
      *
      * Returns the value of a single member of the headers class member
      *
-     * @param	string		$index		Header name
-     * @param	bool		$xss_clean	Whether to apply XSS filtering
-     * @return	string|null	The requested header on success or NULL on failure
+     * @param string $index     Header name
+     * @param bool   $xss_clean Whether to apply XSS filtering
+     *
+     * @return string|null The requested header on success or NULL on failure
      */
     public function get_request_header($index, $xss_clean = false)
     {
@@ -218,7 +225,7 @@ class CI_Input
      *
      * Test to see if a request contains the HTTP_X_REQUESTED_WITH header.
      *
-     * @return 	bool
+     * @return bool
      */
     public function is_ajax_request()
     {
@@ -231,7 +238,8 @@ class CI_Input
      * Test to see if a request was made from the command line.
      *
      * @deprecated	3.0.0	Use is_cli() instead
-     * @return	bool
+     *
+     * @return bool
      */
     public function is_cli_request()
     {
@@ -239,13 +247,14 @@ class CI_Input
     }
 
     /**
-     * Get Request Method
+     * Get Request Method.
      *
      * Return the request method
      *
-     * @param	bool	$upper	Whether to return in upper or lower case
-     *				(default: FALSE)
-     * @return 	string
+     * @param bool $upper Whether to return in upper or lower case
+     *                    (default: FALSE)
+     *
+     * @return string
      */
     public function method($upper = false)
     {
@@ -255,12 +264,13 @@ class CI_Input
     }
 
     /**
-     * Magic __get()
+     * Magic __get().
      *
      * Allows read access to protected properties
      *
-     * @param	string	$name
-     * @return	mixed
+     * @param string $name
+     *
+     * @return mixed
      */
     public function __get($name)
     {

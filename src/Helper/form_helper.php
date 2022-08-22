@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -18,7 +18,7 @@ use Fluent\Legacy\Exception\NotSupportedException;
 
 if (! function_exists('form_error')) {
     /**
-     * Form Error
+     * Form Error.
      *
      * Returns the error for a specific form field. This is a helper for the
      * form validation class.
@@ -26,8 +26,6 @@ if (! function_exists('form_error')) {
      * @param   string
      * @param   string
      * @param   string
-     *
-     * @return  string
      */
     function form_error($field = '', $prefix = '', $suffix = ''): string
     {
@@ -47,15 +45,13 @@ if (! function_exists('form_error')) {
 
 if (! function_exists('validation_errors')) {
     /**
-     * Validation Error String
+     * Validation Error String.
      *
      * Returns all the errors associated with a form submission. This is a helper
      * function for the form validation class.
      *
      * @param   string
      * @param   string
-     *
-     * @return  string
      */
     function validation_errors($prefix = '', $suffix = ''): string
     {

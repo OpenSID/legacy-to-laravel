@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -31,16 +31,16 @@ class CI_Output
     }
 
     /**
-     * Set Header
+     * Set Header.
      *
      * Lets you set a server header which will be sent with the final output.
      *
      * Note: If a file is cached, headers will not be sent.
      *
-     * @param   string $header  Header
-     * @param   bool   $replace Whether to replace the old header value, if already set
+     * @param string $header  Header
+     * @param bool   $replace Whether to replace the old header value, if already set
      *
-     * @return  CI_Output
+     * @return CI_Output
      *
      * @todo    We need to figure out how to permit headers to be cached.
      */
@@ -60,11 +60,9 @@ class CI_Output
     }
 
     /**
-     * Get Output
+     * Get Output.
      *
      * Returns the current output string.
-     *
-     * @return  string
      */
     public function get_output(): string
     {
@@ -72,12 +70,13 @@ class CI_Output
     }
 
     /**
-     * Set Output
+     * Set Output.
      *
      * Sets the output string.
      *
-     * @param	string	$output	Output data
-     * @return	CI_Output
+     * @param string $output Output data
+     *
+     * @return CI_Output
      */
     public function set_output($output)
     {
@@ -87,11 +86,12 @@ class CI_Output
     }
 
     /**
-     * Set Content-Type Header
+     * Set Content-Type Header.
      *
-     * @param	string	$mime_type	Extension of the file we're outputting
-     * @param	string	$charset	Character set (default: NULL)
-     * @return	CI_Output
+     * @param string $mime_type Extension of the file we're outputting
+     * @param string $charset   Character set (default: NULL)
+     *
+     * @return CI_Output
      */
     public function set_content_type($mime_type, $charset = null)
     {
@@ -101,10 +101,11 @@ class CI_Output
     }
 
     /**
-     * Get Header
+     * Get Header.
      *
-     * @param	string	$header
-     * @return	string
+     * @param string $header
+     *
+     * @return string
      */
     public function get_header($header)
     {
@@ -112,14 +113,15 @@ class CI_Output
     }
 
     /**
-     * Set HTTP Status Header
+     * Set HTTP Status Header.
      *
      * As of version 1.7.2, this is an alias for common function
      * set_status_header().
      *
-     * @param	int	$code	Status code (default: 200)
-     * @param	string	$text	Optional message
-     * @return	CI_Output
+     * @param int    $code Status code (default: 200)
+     * @param string $text Optional message
+     *
+     * @return CI_Output
      */
     public function set_status_header($code = 200, $text = '')
     {
@@ -129,9 +131,9 @@ class CI_Output
     }
 
     /**
-     * Enable/disable Profiler
+     * Enable/disable Profiler.
      *
-     * @return  CI_Output
+     * @return CI_Output
      */
     public function enable_profiler(): self
     {

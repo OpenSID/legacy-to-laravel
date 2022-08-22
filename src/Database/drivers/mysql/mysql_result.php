@@ -3,7 +3,7 @@
 namespace Fluent\Legacy\Database;
 
 /**
- * CodeIgniter
+ * CodeIgniter.
  *
  * An open source application development framework for PHP
  *
@@ -34,27 +34,31 @@ namespace Fluent\Legacy\Database;
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
  * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
  * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
+ *
+ * @see	https://codeigniter.com
  * @since	Version 1.0.0
  * @filesource
  */
 
 /**
- * MySQL Result Class
+ * MySQL Result Class.
  *
  * This class extends the parent result class: CI_DB_result
  *
  * @category	Database
+ *
  * @author		EllisLab Dev Team
- * @link		https://codeigniter.com/userguide3/database/
+ *
+ * @see		https://codeigniter.com/userguide3/database/
  */
 class CI_DB_mysql_result extends CI_DB_result
 {
     /**
-     * Class constructor
+     * Class constructor.
      *
-     * @param	object	&$driver_object
-     * @return	void
+     * @param object &$driver_object
+     *
+     * @return void
      */
     public function __construct(&$driver_object)
     {
@@ -68,9 +72,9 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Number of rows in the result set
+     * Number of rows in the result set.
      *
-     * @return	int
+     * @return int
      */
     public function num_rows()
     {
@@ -80,9 +84,9 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Number of fields in the result set
+     * Number of fields in the result set.
      *
-     * @return	int
+     * @return int
      */
     public function num_fields()
     {
@@ -92,11 +96,11 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Fetch Field Names
+     * Fetch Field Names.
      *
      * Generates an array of column names
      *
-     * @return	array
+     * @return array
      */
     public function list_fields()
     {
@@ -112,11 +116,11 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Field data
+     * Field data.
      *
      * Generates an array of objects containing field meta-data
      *
-     * @return	array
+     * @return array
      */
     public function field_data()
     {
@@ -135,9 +139,9 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Free the result
+     * Free the result.
      *
-     * @return	void
+     * @return void
      */
     public function free_result()
     {
@@ -150,14 +154,15 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Data Seek
+     * Data Seek.
      *
      * Moves the internal pointer to the desired offset. We call
      * this internally before fetching results to make sure the
      * result set starts at zero.
      *
-     * @param	int	$n
-     * @return	bool
+     * @param int $n
+     *
+     * @return bool
      */
     public function data_seek($n = 0)
     {
@@ -169,11 +174,11 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Result - associative array
+     * Result - associative array.
      *
      * Returns the result set as an array
      *
-     * @return	array
+     * @return array
      */
     protected function _fetch_assoc()
     {
@@ -183,12 +188,13 @@ class CI_DB_mysql_result extends CI_DB_result
     // --------------------------------------------------------------------
 
     /**
-     * Result - object
+     * Result - object.
      *
      * Returns the result set as an object
      *
-     * @param	string	$class_name
-     * @return	object
+     * @param string $class_name
+     *
+     * @return object
      */
     protected function _fetch_object($class_name = 'stdClass')
     {

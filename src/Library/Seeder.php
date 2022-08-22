@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Copyright (c) 2021 Kenji Suzuki
- * Copyright (c) 2022 Agung Sugiarto
+ * Copyright (c) 2022 Agung Sugiarto.
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
@@ -22,7 +22,7 @@ use Fluent\Legacy\Database\CI_DB;
 use Fluent\Legacy\Database\CI_DB_forge;
 
 /**
- * Seeder
+ * Seeder.
  *
  * based on Seeder in ci-phpunit-test
  *  <https://github.com/kenjis/ci-phpunit-test/blob/master/application/libraries/Seeder.php>
@@ -51,9 +51,7 @@ abstract class Seeder extends CI4Seeder
     }
 
     /**
-     * Set path for seeder files
-     *
-     * @param string $path
+     * Set path for seeder files.
      */
     public function setPath_(string $path)
     {
@@ -61,10 +59,9 @@ abstract class Seeder extends CI4Seeder
     }
 
     /**
-     * Run another seeder
+     * Run another seeder.
      *
-     * @param string $seeder           Seeder classname
-     * @param bool   $callDependencies
+     * @param string $seeder Seeder classname
      */
     public function call_(string $seeder, bool $callDependencies = true): void
     {
@@ -81,7 +78,7 @@ abstract class Seeder extends CI4Seeder
     }
 
     /**
-     * Get Seeder instance
+     * Get Seeder instance.
      */
     protected function loadSeeder(string $seeder): Seeder
     {
@@ -94,7 +91,7 @@ abstract class Seeder extends CI4Seeder
     }
 
     /**
-     * Call dependency seeders
+     * Call dependency seeders.
      */
     protected function callDependencies(string $seedPath): void
     {
@@ -111,7 +108,7 @@ abstract class Seeder extends CI4Seeder
     }
 
     /**
-     * Call dependency seeder
+     * Call dependency seeder.
      *
      * @param string|array $seederName
      */
