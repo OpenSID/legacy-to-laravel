@@ -54,15 +54,15 @@ use Exception;
 function &DB($params = '', $query_builder_override = null)
 {
     // Load the DB config file if a DSN string wasn't passed
-    if (is_string($params) && strpos($params, '://') === FALSE) {
+    if (is_string($params) && strpos($params, '://') === false) {
         // Is the config file in the environment folder?
-        if (!file_exists($file_path = config_path() . '/database.php')) {
+        if (! file_exists($file_path = config_path().'/database.php')) {
             show_error('The configuration file database.php does not exist.');
         }
 
-        $db = include($file_path);
+        $db = include $file_path;
 
-        if (!isset($db) or count($db) === 0) {
+        if (! isset($db) or count($db) === 0) {
             show_error('No database connection settings were found in the database config file.');
         }
 
@@ -70,10 +70,10 @@ function &DB($params = '', $query_builder_override = null)
             $active_group = $params;
         }
 
-        if (!isset($db['default'])) {
+        if (! isset($db['default'])) {
             show_error('You have not specified a database connection group via default in your config/database.php file.');
-        } elseif (!isset($db['connections'][$db['default']])) {
-            show_error('You have specified an invalid database connection group (' . $active_group . ') in your config/database.php file.');
+        } elseif (! isset($db['connections'][$db['default']])) {
+            show_error('You have specified an invalid database connection group ('.$active_group.') in your config/database.php file.');
         }
 
         $params = $db['connections'][$db['default']];
@@ -85,26 +85,26 @@ function &DB($params = '', $query_builder_override = null)
          * parameter. DSNs must have this prototype:
          * $dsn = 'driver://username:password@hostname/database';
          */
-        if (($dsn = @parse_url($params)) === FALSE) {
+        if (($dsn = @parse_url($params)) === false) {
             show_error('Invalid DB Connection String');
         }
 
-        $params = array(
-            'dbdriver'	=> $dsn['scheme'],
-            'hostname'	=> isset($dsn['host']) ? rawurldecode($dsn['host']) : '',
-            'port'		=> isset($dsn['port']) ? rawurldecode($dsn['port']) : '',
-            'username'	=> isset($dsn['user']) ? rawurldecode($dsn['user']) : '',
-            'password'	=> isset($dsn['pass']) ? rawurldecode($dsn['pass']) : '',
-            'database'	=> isset($dsn['path']) ? rawurldecode(substr($dsn['path'], 1)) : ''
-        );
+        $params = [
+            'dbdriver' => $dsn['scheme'],
+            'hostname' => isset($dsn['host']) ? rawurldecode($dsn['host']) : '',
+            'port' => isset($dsn['port']) ? rawurldecode($dsn['port']) : '',
+            'username' => isset($dsn['user']) ? rawurldecode($dsn['user']) : '',
+            'password' => isset($dsn['pass']) ? rawurldecode($dsn['pass']) : '',
+            'database' => isset($dsn['path']) ? rawurldecode(substr($dsn['path'], 1)) : '',
+        ];
 
         // Were additional config items set?
         if (isset($dsn['query'])) {
             parse_str($dsn['query'], $extra);
 
             foreach ($extra as $key => $val) {
-                if (is_string($val) && in_array(strtoupper($val), array('TRUE', 'FALSE', 'NULL'))) {
-                    $val = var_export($val, TRUE);
+                if (is_string($val) && in_array(strtoupper($val), ['TRUE', 'FALSE', 'NULL'])) {
+                    $val = var_export($val, true);
                 }
 
                 $params[$key] = $val;
