@@ -117,7 +117,7 @@ class ModelLoader
 
     private function createInstance(string $classname): object
     {
-        $instance = model($classname, false);
+        $instance = new $classname();
 
         $message = 'Model "'.$classname.'" created';
         DebugLog::log(__METHOD__, $message);
