@@ -97,13 +97,14 @@ class ModelLoader
 
     private function getPropertyName(string $model, string $name): string
     {
-        if ($this->inSubDir($model)) {
-            $parts = explode('/', $model);
-
-            return end($parts);
-        }
-
         if ($name === '') {
+
+            if ($this->inSubDir($model)) {
+                $parts = explode('/', $model);
+
+                return end($parts);
+            }
+
             return $model;
         }
 
