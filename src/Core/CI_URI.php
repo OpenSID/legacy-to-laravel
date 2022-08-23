@@ -28,22 +28,24 @@ class CI_URI
     }
 
     /**
-     * Fetch URI Segment
+     * Fetch URI Segment.
      *
      * @see		CI_URI::$segments
-     * @param	int		$n		Index
-     * @param	mixed		$no_result	What to return if the segment index is not found
-     * @return	mixed
+     *
+     * @param int   $n         Index
+     * @param mixed $no_result What to return if the segment index is not found
+     *
+     * @return mixed
      */
-    public function segment($n, $no_result = NULL)
+    public function segment($n, $no_result = null)
     {
         return $this->request->segment($n, $no_result);
     }
 
     /**
-     * Segment Array
+     * Segment Array.
      *
-     * @return	array	CI_URI::$segments
+     * @return array CI_URI::$segments
      */
     public function segment_array()
     {
@@ -51,9 +53,9 @@ class CI_URI
     }
 
     /**
-     * Total number of segments
+     * Total number of segments.
      *
-     * @return	int
+     * @return int
      */
     public function total_segments()
     {
@@ -61,9 +63,9 @@ class CI_URI
     }
 
     /**
-     * Fetch URI string
+     * Fetch URI string.
      *
-     * @return	string	CI_URI::$uri_string
+     * @return string CI_URI::$uri_string
      */
     public function uri_string()
     {
