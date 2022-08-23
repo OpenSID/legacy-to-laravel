@@ -15,14 +15,11 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Library;
 
-use CodeIgniter\Session\Session;
-use Config\App;
-use Config\Services;
 use Fluent\Legacy\Exception\NotSupportedException;
 
 class CI_Session
 {
-    /** @var Session */
+    /** @var \Illuminate\Session\Store */
     private $session;
 
     /**
@@ -35,22 +32,10 @@ class CI_Session
         if (is_array($params)) {
             throw new NotSupportedException(
                 'Configuration array is not supported.'
-                .' Please convert it to `Config\App` class.'
-                .' See <https://codeigniter4.github.io/CodeIgniter4/libraries/sessions.html#session-preferences>.'
             );
         }
 
-        $this->session = Services::session($params);
-    }
-
-    /**
-     * For debugging.
-     *
-     * @internal
-     */
-    public function getCI4Library(): Session
-    {
-        return $this->session;
+        $this->session = session();
     }
 
     /**
@@ -65,7 +50,7 @@ class CI_Session
      */
     public function set_userdata($data, $value = null)
     {
-        $this->session->set($data, $value);
+        $this->session->put($data, $value);
     }
 
     /**
@@ -92,7 +77,7 @@ class CI_Session
      */
     public function __set(string $key, $value)
     {
-        $this->session->set($key, $value);
+        $this->session->put($key, $value);
     }
 
     /**
@@ -133,7 +118,7 @@ class CI_Session
      */
     public function set_flashdata($data, $value = null)
     {
-        $this->session->setFlashdata($data, $value);
+        $this->session->flash($data, $value);
     }
 
     /**
@@ -147,7 +132,7 @@ class CI_Session
      */
     public function flashdata(?string $key = null)
     {
-        return $this->session->getFlashdata($key);
+        return $this->session->get($key);
     }
 
     /**
@@ -157,6 +142,6 @@ class CI_Session
      */
     public function sess_destroy(): void
     {
-        $this->session->destroy();
+        $this->session->invalidate();
     }
 }
