@@ -15,7 +15,58 @@ declare(strict_types=1);
 
 namespace Fluent\Legacy\Core;
 
+use Illuminate\Http\Request;
+
 class CI_URI
 {
-    // @TODO
+    /** @var \Illuminate\Http\Request */
+    protected $request;
+
+    public function __construct()
+    {
+        $this->request = Request::capture();
+    }
+
+    /**
+     * Fetch URI Segment
+     *
+     * @see		CI_URI::$segments
+     * @param	int		$n		Index
+     * @param	mixed		$no_result	What to return if the segment index is not found
+     * @return	mixed
+     */
+    public function segment($n, $no_result = NULL)
+    {
+        return $this->request->segment($n, $no_result);
+    }
+
+    /**
+     * Segment Array
+     *
+     * @return	array	CI_URI::$segments
+     */
+    public function segment_array()
+    {
+        return $this->request->segments();
+    }
+
+    /**
+     * Total number of segments
+     *
+     * @return	int
+     */
+    public function total_segments()
+    {
+        return count($this->request->segments());
+    }
+
+    /**
+     * Fetch URI string
+     *
+     * @return	string	CI_URI::$uri_string
+     */
+    public function uri_string()
+    {
+        return $this->request->decodedPath();
+    }
 }
