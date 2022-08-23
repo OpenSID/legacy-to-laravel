@@ -11,7 +11,6 @@ class LegacyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->view->share('ci', get_instance());
     }
 
     /**
