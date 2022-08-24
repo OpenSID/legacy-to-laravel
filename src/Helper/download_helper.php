@@ -17,14 +17,15 @@ use Illuminate\Support\Facades\File;
 
 if (! function_exists('force_download')) {
     /**
-     * Force Download
+     * Force Download.
      *
      * Generates headers that force a download to happen
      *
      * @param	mixed	filename
      * @param	mixed	file path to be downloaded
      * @param	bool	whether to try and send the actual file MIME type
-     * @return	void
+     *
+     * @return void
      */
     function force_download($filename = '', $data = '', $set_mime = false)
     {
