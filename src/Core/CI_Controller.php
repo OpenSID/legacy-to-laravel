@@ -15,11 +15,11 @@ declare(strict_types=1);
 
 namespace OpenDesa\Legacy\Core;
 
-use OpenDesa\Legacy\Internal\DebugLog;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
+use OpenDesa\Legacy\Internal\DebugLog;
 
 /**
  * @property \OpenDesa\Legacy\Core\CI_Benchmark            $benchmark

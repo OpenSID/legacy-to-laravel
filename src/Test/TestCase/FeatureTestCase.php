@@ -18,10 +18,10 @@ namespace OpenDesa\Legacy\Test\TestCase;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
+use Kenjis\PhpUnitHelper\TestDouble;
 use OpenDesa\Legacy\Test\Traits\FeatureTest;
 use OpenDesa\Legacy\Test\Traits\ResetInstance;
 use OpenDesa\Legacy\Test\Traits\SessionTest;
-use Kenjis\PhpUnitHelper\TestDouble;
 
 class FeatureTestCase extends CIUnitTestCase
 {

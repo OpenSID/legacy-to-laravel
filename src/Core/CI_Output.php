@@ -15,8 +15,8 @@ declare(strict_types=1);
 
 namespace OpenDesa\Legacy\Core;
 
-use OpenDesa\Legacy\Exception\NotSupportedException;
 use Illuminate\Http\Response;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 class CI_Output
 {

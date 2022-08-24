@@ -16,8 +16,8 @@ declare(strict_types=1);
 namespace OpenDesa\Legacy\Test\TestCase;
 
 use CodeIgniter\Test\CIUnitTestCase;
-use OpenDesa\Legacy\Test\Traits\ResetInstance;
 use Kenjis\PhpUnitHelper\TestDouble;
+use OpenDesa\Legacy\Test\Traits\ResetInstance;
 
 class TestCase extends CIUnitTestCase
 {

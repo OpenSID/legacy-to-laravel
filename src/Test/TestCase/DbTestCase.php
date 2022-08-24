@@ -17,8 +17,8 @@ namespace OpenDesa\Legacy\Test\TestCase;
 
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
-use OpenDesa\Legacy\Test\Traits\ResetInstance;
 use Kenjis\PhpUnitHelper\TestDouble;
+use OpenDesa\Legacy\Test\Traits\ResetInstance;
 
 class DbTestCase extends CIUnitTestCase
 {
