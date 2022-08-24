@@ -91,15 +91,15 @@ class CI_Loader
         $this->injectLoadedClassesToView();
 
         if ($return) {
-            return view($view, $vars);
+            return view($view, $vars)->share('ci', get_instance());
         }
 
-        echo view($view, $vars);
+        echo view($view, $vars)->share('ci', get_instance());
     }
 
     private function injectLoadedClassesToView(): void
     {
-        $view = view();
+        $view = view()->share('ci', get_instance());
 
         if ($this->coreClassesInjectedToView === false) {
             $this->coreLoader->injectTo($view);

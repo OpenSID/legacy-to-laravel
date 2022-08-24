@@ -1,9 +1,9 @@
 {
-    "name": "agungsugiarto/legacy-to-laravel",
+    "name": "opendesa/legacy-to-laravel",
     "type": "library",
     "description": "Help upgrade from CodeIgniter3 to Laravel",
     "keywords": ["codeigniter","codeigniter3", "laravel", "laravel-framework"],
-    "homepage": "https://github.com/agungsugiarto/legacy-to-laravel",
+    "homepage": "https://github.com/opensid/legacy-to-laravel",
     "license": "MIT",
     "authors": [
         {
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Fluent\\Legacy\\": "src/"
+            "OpenDesa\\Legacy\\": "src/"
         },
         "files": [
             "src/bootstrap.php"
@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "Fluent\\Legacy\\LegacyServiceProvider"
+                "OpenDesa\\Legacy\\LegacyServiceProvider"
             ]
         }
     },

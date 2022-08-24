@@ -59,7 +59,6 @@ class CI_Controller extends Controller
         DebugLog::log(__METHOD__, $message);
 
         self::$instance = &$this;
-        view()->share('ci', self::$instance);
 
         $this->load = new CI_Loader();
         $this->load->setController($this);

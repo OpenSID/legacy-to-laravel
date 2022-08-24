@@ -32,10 +32,6 @@ namespace OpenDesa\Legacy\Core;
  */
 class CI_Model
 {
-    public function __construct()
-    {
-    }
-
     public function __get($key)
     {
         // Debugging note:
