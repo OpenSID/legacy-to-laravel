@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Database;
+namespace OpenDesa\Legacy\Database;
 
 use Config\Database;
 

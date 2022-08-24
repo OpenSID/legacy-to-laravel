@@ -13,7 +13,7 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-use Fluent\Legacy\Core\CoreLoader;
+use OpenDesa\Legacy\Core\CoreLoader;
 
 require __DIR__.'/Core/get_instance.php';
 require __DIR__.'/Core/Common.php';

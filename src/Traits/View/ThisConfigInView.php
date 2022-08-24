@@ -13,7 +13,7 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Traits\View;
+namespace OpenDesa\Legacy\Traits\View;
 
 /**
  * Use in app/Config/View.php.

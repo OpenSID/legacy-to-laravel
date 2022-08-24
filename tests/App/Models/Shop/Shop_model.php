@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Models\Shop;
 
-use Fluent\Legacy\Core\CI_Input;
-use Fluent\Legacy\Core\CI_Loader;
-use Fluent\Legacy\Core\CI_Model;
-use Fluent\Legacy\Database\CI_DB;
+use OpenDesa\Legacy\Core\CI_Input;
+use OpenDesa\Legacy\Core\CI_Loader;
+use OpenDesa\Legacy\Core\CI_Model;
+use OpenDesa\Legacy\Database\CI_DB;
 
 /**
  * @property CI_Loader $load

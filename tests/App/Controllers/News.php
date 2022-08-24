@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Models\News_model;
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\Library\CI_Form_validation;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Library\CI_Form_validation;
 
 /**
  * @property News_model $news_model

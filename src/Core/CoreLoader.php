@@ -13,12 +13,12 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 use const CASE_LOWER;
-use Fluent\Legacy\Core\Loader\ClassResolver\CoreResolver;
-use Fluent\Legacy\Core\Loader\ControllerPropertyInjector;
-use Fluent\Legacy\Internal\DebugLog;
+use OpenDesa\Legacy\Core\Loader\ClassResolver\CoreResolver;
+use OpenDesa\Legacy\Core\Loader\ControllerPropertyInjector;
+use OpenDesa\Legacy\Internal\DebugLog;
 use ReflectionObject;
 
 class CoreLoader

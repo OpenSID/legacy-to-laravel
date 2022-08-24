@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\HTTP\URI;
 use Config\Services;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_PaginationTest extends TestCase
 {

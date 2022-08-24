@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Test;
+namespace OpenDesa\Legacy\Test;
 
 use App\Controllers\Test;
-use Fluent\Legacy\Test\TestCase\FeatureTestCase;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Test\TestCase\FeatureTestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class TestRequestTest extends TestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\TestSupport;
+namespace OpenDesa\Legacy\TestSupport;
 
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\LogTestHelperTrait;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\LogTestHelperTrait;
 use Kenjis\PhpUnitHelper\ReflectionHelper;
 use Kenjis\PhpUnitHelper\TestDouble;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Helper;
+namespace OpenDesa\Legacy\Helper;
 
 class url_helperTest extends HelperTestCase
 {

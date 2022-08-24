@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core\Loader;
+namespace OpenDesa\Legacy\Core\Loader;
 
 use App\Controllers\News;
-use Fluent\Legacy\Library\CI_Form_validation;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Library\CI_Form_validation;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class LibraryLoaderTest extends TestCase
 {

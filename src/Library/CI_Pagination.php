@@ -13,12 +13,12 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\Pager\Pager;
 use Config\Pager as PagerConfig;
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 class CI_Pagination
 {

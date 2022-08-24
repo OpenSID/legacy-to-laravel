@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Database\Seeds;
 
-use Fluent\Legacy\Library\Seeder;
+use OpenDesa\Legacy\Library\Seeder;
 
 class FavoriteSeeder extends Seeder
 {

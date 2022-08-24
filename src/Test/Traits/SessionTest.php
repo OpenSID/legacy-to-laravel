@@ -13,7 +13,7 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test\Traits;
+namespace OpenDesa\Legacy\Test\Traits;
 
 use CodeIgniter\Session\Handlers\ArrayHandler;
 use CodeIgniter\Session\SessionInterface;

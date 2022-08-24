@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use Config\Services;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_User_agentTest extends TestCase
 {

@@ -13,14 +13,14 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test;
+namespace OpenDesa\Legacy\Test;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\Response;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\FeatureResponse;
 use Config\App;
-use Fluent\Legacy\Test\TestCase\TestCase;
+use OpenDesa\Legacy\Test\TestCase\TestCase;
 
 class TestRequest
 {

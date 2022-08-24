@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core\Loader\ClassResolver;
+namespace OpenDesa\Legacy\Core\Loader\ClassResolver;
 
 use App\Models\News_model;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class ModelResolverTest extends TestCase
 {

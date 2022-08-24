@@ -13,12 +13,12 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\Database\Forge;
 use CodeIgniter\Database\Migration;
-use Fluent\Legacy\Database\CI_DB;
-use Fluent\Legacy\Database\CI_DB_forge;
+use OpenDesa\Legacy\Database\CI_DB;
+use OpenDesa\Legacy\Database\CI_DB_forge;
 
 abstract class CI_Migration extends Migration
 {

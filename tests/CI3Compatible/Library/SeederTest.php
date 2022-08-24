@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use App\Database\Seeds\CategorySeeder;
 use Config\Database;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class SeederTest extends TestCase
 {

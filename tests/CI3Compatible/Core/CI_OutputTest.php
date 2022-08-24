@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 use CodeIgniter\HTTP\Response;
 use Config\App;
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_OutputTest extends TestCase
 {

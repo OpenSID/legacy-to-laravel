@@ -64,9 +64,9 @@ Example:
 *ci3-to-4-upgrade-helper* provides TestCase classes. 
 
 The TestCase classes of *ci-phpunit-test* correspond to the following classes:
-- `TestCase` → `Fluent\Legacy\Test\TestCase\TestCase`
-- `DbTestCase` → `Fluent\Legacy\Test\TestCase\DbTestCase`
-- `UnitTestCase` → `Fluent\Legacy\Test\TestCase\UnitTestCase`
+- `TestCase` → `OpenDesa\Legacy\Test\TestCase\TestCase`
+- `DbTestCase` → `OpenDesa\Legacy\Test\TestCase\DbTestCase`
+- `UnitTestCase` → `OpenDesa\Legacy\Test\TestCase\UnitTestCase`
 
 ### DbTestCase
 
@@ -76,7 +76,7 @@ If you want to use database seeding, use `DbTestCase`. And define the property `
 
 *ci3-to-4-upgrade-helper* introduces a new TestCase that corresponds to CI4's [FeatureTestCase](https://codeigniter4.github.io/CodeIgniter4/testing/feature.html#the-test-class).
 
-- `Fluent\Legacy\Test\TestCase\FeatureTestCase`
+- `OpenDesa\Legacy\Test\TestCase\FeatureTestCase`
 
 If you use `$this->request`, use it instead of `TestCase`.
 
@@ -84,9 +84,9 @@ If you use `$this->request`, use it instead of `TestCase`.
 
 *ci3-to-4-upgrade-helper* also provides Traits for testing.
 
-- `Fluent\Legacy\Test\Traits\SessionTest`
+- `OpenDesa\Legacy\Test\Traits\SessionTest`
   - Provides the mock session
-- `Fluent\Legacy\Test\Traits\UnitTest`
+- `OpenDesa\Legacy\Test\Traits\UnitTest`
   - Provides `$this->newController()`, `$this->newModel()`
 
 ### setUp()
@@ -119,7 +119,7 @@ The state of `Config\Services` may change test results. If you think you must re
 If you use `$this->request->setCallable()` or `$this->request->addCallable()`, add the `post_controller_constructor` *Event* in `app/Config/Events.php`.
 
 ```php
-use Fluent\Legacy\Test\TestRequest;
+use OpenDesa\Legacy\Test\TestRequest;
 
 Events::on('post_controller_constructor', function () {
     if (ENVIRONMENT === 'testing') {
@@ -143,7 +143,7 @@ $email = $this->getDouble('CI_Email', ['send' => true]);
 ```
 ↓
 ```php
-use Fluent\Legacy\Library\CI_Email;
+use OpenDesa\Legacy\Library\CI_Email;
 
 $email = $this->getDouble(CI_Email::class, ['send' => true]);
 ```
@@ -188,12 +188,12 @@ Example:
 @@ -2,6 +2,7 @@
  
  use App\Database\Seeds\NewsSeeder;
- use Fluent\Legacy\Test\TestCase\FeatureTestCase;
+ use OpenDesa\Legacy\Test\TestCase\FeatureTestCase;
 +use Kenjis\MonkeyPatch\Traits\MonkeyPatchTrait;
  
  /**
   * @group controller
-@@ -9,6 +10,8 @@ use Fluent\Legacy\Test\TestCase\FeatureTestCase;
+@@ -9,6 +10,8 @@ use OpenDesa\Legacy\Test\TestCase\FeatureTestCase;
   */
  class News_test extends FeatureTestCase
  {

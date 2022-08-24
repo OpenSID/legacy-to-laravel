@@ -13,10 +13,10 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\Exception\NotImplementedException;
-use Fluent\Legacy\Exception\RuntimeException;
+use OpenDesa\Legacy\Exception\NotImplementedException;
+use OpenDesa\Legacy\Exception\RuntimeException;
 
 class CI_Config
 {

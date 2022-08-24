@@ -8,8 +8,8 @@ declare(strict_types=1);
 namespace CodeIgniter\HTTP\Files;
 
 use Config\Services;
-use Fluent\Legacy\Library\CI_Upload;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Library\CI_Upload;
+use OpenDesa\Legacy\TestSupport\TestCase;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 

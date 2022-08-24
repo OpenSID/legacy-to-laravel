@@ -13,28 +13,28 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\Internal\DebugLog;
+use OpenDesa\Legacy\Internal\DebugLog;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 
 /**
- * @property \Fluent\Legacy\Core\CI_Benchmark            $benchmark
- * @property \Fluent\Legacy\Core\CI_Config               $config
- * @property \Fluent\Legacy\Database\CI_DB_query_builder $db
- * @property \Fluent\Legacy\Core\CI_Input                $input
- * @property \Fluent\Legacy\Core\CI_Lang                 $lang
- * @property \Fluent\Legacy\Core\CI_Loader               $loader
- * @property \Fluent\Legacy\Core\CI_Log                  $log
- * @property \Fluent\Legacy\Core\CI_Output               $output
- * @property \Fluent\Legacy\Core\CI_Router               $router
- * @property \Fluent\Legacy\Core\CI_Security             $security
- * @property \Fluent\Legacy\Core\CI_Session              $session
- * @property \Fluent\Legacy\Core\CI_URI                  $uri
- * @property \Fluent\Legacy\Core\CI_Utf8                 $utf8
+ * @property \OpenDesa\Legacy\Core\CI_Benchmark            $benchmark
+ * @property \OpenDesa\Legacy\Core\CI_Config               $config
+ * @property \OpenDesa\Legacy\Database\CI_DB_query_builder $db
+ * @property \OpenDesa\Legacy\Core\CI_Input                $input
+ * @property \OpenDesa\Legacy\Core\CI_Lang                 $lang
+ * @property \OpenDesa\Legacy\Core\CI_Loader               $loader
+ * @property \OpenDesa\Legacy\Core\CI_Log                  $log
+ * @property \OpenDesa\Legacy\Core\CI_Output               $output
+ * @property \OpenDesa\Legacy\Core\CI_Router               $router
+ * @property \OpenDesa\Legacy\Core\CI_Security             $security
+ * @property \OpenDesa\Legacy\Core\CI_Session              $session
+ * @property \OpenDesa\Legacy\Core\CI_URI                  $uri
+ * @property \OpenDesa\Legacy\Core\CI_Utf8                 $utf8
  */
 class CI_Controller extends Controller
 {

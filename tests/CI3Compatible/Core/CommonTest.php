@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
-use Fluent\Legacy\Exception\NotSupportedException;
-use Fluent\Legacy\Exception\RuntimeException;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\RuntimeException;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CommonTest extends TestCase
 {

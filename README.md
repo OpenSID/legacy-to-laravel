@@ -60,8 +60,8 @@ Open file `config/database.php` to configuration
 namespace App\Http\Controllers;
 
 use App\Models\News_model;
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\Library\CI_Form_validation;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Library\CI_Form_validation;
 
 /**
  * @property News_model $news_model
@@ -131,7 +131,7 @@ class News extends CI_Controller
 
 namespace App\Models;
 
-use Fluent\Legacy\Core\CI_Model;
+use OpenDesa\Legacy\Core\CI_Model;
 
 class News_model extends CI_Model
 {

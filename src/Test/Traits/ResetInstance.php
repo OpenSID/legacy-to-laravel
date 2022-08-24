@@ -13,11 +13,11 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test\Traits;
+namespace OpenDesa\Legacy\Test\Traits;
 
 use Config\Services;
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\Core\CoreLoader;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Core\CoreLoader;
 
 /**
  * @internal

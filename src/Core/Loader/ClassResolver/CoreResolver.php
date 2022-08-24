@@ -13,12 +13,12 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core\Loader\ClassResolver;
+namespace OpenDesa\Legacy\Core\Loader\ClassResolver;
 
 class CoreResolver
 {
     /** @var string */
-    private $ci3CoreNamespace = 'Fluent\Legacy\Core';
+    private $ci3CoreNamespace = 'OpenDesa\Legacy\Core';
 
     /** @var string */
     private $prefix = 'CI_';

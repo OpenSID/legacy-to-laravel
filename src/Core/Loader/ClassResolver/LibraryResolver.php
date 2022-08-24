@@ -13,16 +13,16 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core\Loader\ClassResolver;
+namespace OpenDesa\Legacy\Core\Loader\ClassResolver;
 
-use Fluent\Legacy\Core\Loader\InSubDir;
+use OpenDesa\Legacy\Core\Loader\InSubDir;
 
 class LibraryResolver
 {
     use InSubDir;
 
     /** @var string */
-    private $ci3LibraryNamespace = 'Fluent\Legacy\Library';
+    private $ci3LibraryNamespace = 'OpenDesa\Legacy\Library';
 
     /** @var string[] */
     private $ci3Libraries = [

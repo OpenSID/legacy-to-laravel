@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core\Loader;
+namespace OpenDesa\Legacy\Core\Loader;
 
 use App\Controllers\News;
 use CodeIgniter\Config\Factories;
 use CodeIgniter\Model;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class ModelLoaderTest extends TestCase
 {

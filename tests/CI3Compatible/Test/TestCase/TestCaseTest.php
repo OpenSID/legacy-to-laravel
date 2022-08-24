@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Test\TestCase;
+namespace OpenDesa\Legacy\Test\TestCase;
 
 use App\Controllers\MY_Controller;
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\Test\TestCase\TestCase as CI3TestCase;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Test\TestCase\TestCase as CI3TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class TestCaseTest extends TestCase
 {

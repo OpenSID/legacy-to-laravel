@@ -13,9 +13,9 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 

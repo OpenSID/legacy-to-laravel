@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Test\Traits;
+namespace OpenDesa\Legacy\Test\Traits;
 
 use App\Controllers\MY_Controller;
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\TestSupport\TestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class ResetInstanceTest extends TestCase

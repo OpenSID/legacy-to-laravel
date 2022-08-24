@@ -13,7 +13,7 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 class CI_Security
 {

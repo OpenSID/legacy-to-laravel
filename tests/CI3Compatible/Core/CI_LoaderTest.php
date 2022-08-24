@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 use App\Libraries\Validation\Field_validation;
 use App\Models\News_model;
 use App\Models\Shop\Shop_model;
-use Fluent\Legacy\Database\CI_DB;
-use Fluent\Legacy\Database\CI_DB_forge;
-use Fluent\Legacy\Library\CI_Form_validation;
-use Fluent\Legacy\Library\CI_User_agent;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Database\CI_DB;
+use OpenDesa\Legacy\Database\CI_DB_forge;
+use OpenDesa\Legacy\Library\CI_Form_validation;
+use OpenDesa\Legacy\Library\CI_User_agent;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_LoaderTest extends TestCase
 {

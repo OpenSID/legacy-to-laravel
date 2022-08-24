@@ -13,14 +13,14 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\Validation\Validation;
 use Config\Services;
 use Config\Validation as ConfigValidation;
-use Fluent\Legacy\Exception\NotImplementedException;
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotImplementedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 class CI_Form_validation
 {

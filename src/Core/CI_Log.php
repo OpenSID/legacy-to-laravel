@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
 class CI_Log
 {

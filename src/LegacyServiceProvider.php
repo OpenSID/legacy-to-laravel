@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy;
+namespace OpenDesa\Legacy;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_ParserTest extends TestCase
 {

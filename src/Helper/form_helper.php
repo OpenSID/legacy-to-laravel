@@ -14,7 +14,7 @@ declare(strict_types=1);
  */
 
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 if (! function_exists('form_error')) {
     /**

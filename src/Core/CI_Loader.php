@@ -13,15 +13,15 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\Core\Loader\ControllerPropertyInjector;
-use Fluent\Legacy\Core\Loader\DatabaseLoader;
-use Fluent\Legacy\Core\Loader\HelperLoader;
-use Fluent\Legacy\Core\Loader\LibraryLoader;
-use Fluent\Legacy\Core\Loader\ModelLoader;
-use Fluent\Legacy\Database\CI_DB_forge;
-use Fluent\Legacy\Exception\NotImplementedException;
+use OpenDesa\Legacy\Core\Loader\ControllerPropertyInjector;
+use OpenDesa\Legacy\Core\Loader\DatabaseLoader;
+use OpenDesa\Legacy\Core\Loader\HelperLoader;
+use OpenDesa\Legacy\Core\Loader\LibraryLoader;
+use OpenDesa\Legacy\Core\Loader\ModelLoader;
+use OpenDesa\Legacy\Database\CI_DB_forge;
+use OpenDesa\Legacy\Exception\NotImplementedException;
 
 class CI_Loader
 {

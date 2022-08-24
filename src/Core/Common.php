@@ -13,8 +13,8 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-use Fluent\Legacy\Exception\NotSupportedException;
-use Fluent\Legacy\Exception\RuntimeException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\RuntimeException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 if (! function_exists('show_error')) {

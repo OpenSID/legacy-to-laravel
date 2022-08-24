@@ -13,11 +13,11 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core\Loader;
+namespace OpenDesa\Legacy\Core\Loader;
 
-use Fluent\Legacy\Database;
-use Fluent\Legacy\Database\CI_DB;
-use Fluent\Legacy\Database\CI_DB_forge;
+use OpenDesa\Legacy\Database;
+use OpenDesa\Legacy\Database\CI_DB;
+use OpenDesa\Legacy\Database\CI_DB_forge;
 
 class DatabaseLoader
 {

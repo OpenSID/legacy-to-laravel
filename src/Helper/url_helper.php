@@ -16,7 +16,7 @@ declare(strict_types=1);
 use CodeIgniter\HTTP\URI;
 use CodeIgniter\Router\Exceptions\RedirectException;
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 if (! function_exists('base_url_')) {
     /**

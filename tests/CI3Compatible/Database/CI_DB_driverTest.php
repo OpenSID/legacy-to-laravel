@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Database;
+namespace OpenDesa\Legacy\Database;
 
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 class CI_DB_driverTest extends DatabaseTestCase
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Test\TestCase;
+namespace OpenDesa\Legacy\Test\TestCase;
 
 use App\Controllers\Test;
 use App\Models\News_model;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class UnitTestCaseTest extends TestCase
 {

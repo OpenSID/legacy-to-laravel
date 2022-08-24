@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\HTTP\IncomingRequest;
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_Form_validationTest extends TestCase
 {

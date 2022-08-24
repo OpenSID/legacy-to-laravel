@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy;
+namespace OpenDesa\Legacy;
 
 use CodeIgniter\Database\BaseConnection;
 use CodeIgniter\Database\Exceptions\DatabaseException;

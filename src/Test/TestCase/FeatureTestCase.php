@@ -13,14 +13,14 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test\TestCase;
+namespace OpenDesa\Legacy\Test\TestCase;
 
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
-use Fluent\Legacy\Test\Traits\FeatureTest;
-use Fluent\Legacy\Test\Traits\ResetInstance;
-use Fluent\Legacy\Test\Traits\SessionTest;
+use OpenDesa\Legacy\Test\Traits\FeatureTest;
+use OpenDesa\Legacy\Test\Traits\ResetInstance;
+use OpenDesa\Legacy\Test\Traits\SessionTest;
 use Kenjis\PhpUnitHelper\TestDouble;
 
 class FeatureTestCase extends CIUnitTestCase

@@ -13,7 +13,7 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-use Fluent\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Core\CI_Controller;
 
 loadTestBootstrap();
 new CI_Controller();

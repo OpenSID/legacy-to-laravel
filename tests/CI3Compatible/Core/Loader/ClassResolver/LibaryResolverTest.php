@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core\Loader\ClassResolver;
+namespace OpenDesa\Legacy\Core\Loader\ClassResolver;
 
-use Fluent\Legacy\Library\CI_Form_validation;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Library\CI_Form_validation;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class LibaryResolverTest extends TestCase
 {

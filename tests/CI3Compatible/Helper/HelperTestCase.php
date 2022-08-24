@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Helper;
+namespace OpenDesa\Legacy\Helper;
 
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 abstract class HelperTestCase extends TestCase
 {

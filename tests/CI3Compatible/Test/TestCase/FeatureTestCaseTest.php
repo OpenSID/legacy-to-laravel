@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Test\TestCase;
+namespace OpenDesa\Legacy\Test\TestCase;
 
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class FeatureTestCaseTest extends TestCase
 {

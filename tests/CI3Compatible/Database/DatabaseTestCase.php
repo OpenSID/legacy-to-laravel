@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Database;
+namespace OpenDesa\Legacy\Database;
 
 use CodeIgniter\Database\BaseConnection;
 use Config\Database;
-use Fluent\Legacy\DatabaseTestHelperTrait;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\DatabaseTestHelperTrait;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 abstract class DatabaseTestCase extends TestCase
 {

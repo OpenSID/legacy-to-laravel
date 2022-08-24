@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core\Loader;
+namespace OpenDesa\Legacy\Core\Loader;
 
 use App\Controllers\News;
-use Fluent\Legacy\Database\CI_DB;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Database\CI_DB;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class DatabaseLoaderTest extends TestCase
 {

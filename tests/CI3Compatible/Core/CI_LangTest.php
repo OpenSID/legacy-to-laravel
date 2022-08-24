@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 use LogicException;
 
 class CI_LangTest extends TestCase

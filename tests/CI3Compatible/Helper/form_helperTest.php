@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Helper;
+namespace OpenDesa\Legacy\Helper;
 
 use Config\Services;
-use Fluent\Legacy\Exception\NotSupportedException;
+use OpenDesa\Legacy\Exception\NotSupportedException;
 
 class form_helperTest extends HelperTestCase
 {

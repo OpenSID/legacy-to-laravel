@@ -13,9 +13,9 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test\Traits;
+namespace OpenDesa\Legacy\Test\Traits;
 
-use Fluent\Legacy\Test\TestRequest;
+use OpenDesa\Legacy\Test\TestRequest;
 
 /**
  * @internal

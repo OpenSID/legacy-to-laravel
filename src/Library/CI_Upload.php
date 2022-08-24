@@ -13,15 +13,15 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Library;
+namespace OpenDesa\Legacy\Library;
 
 use CodeIgniter\HTTP\Files\UploadedFile;
 use CodeIgniter\Images\Exceptions\ImageException;
 use CodeIgniter\Images\Image;
 use Config\Services;
-use Fluent\Legacy\Exception\NotImplementedException;
-use Fluent\Legacy\Library\Upload\FileExtention;
-use Fluent\Legacy\Library\Upload\ValidationRuleMaker;
+use OpenDesa\Legacy\Exception\NotImplementedException;
+use OpenDesa\Legacy\Library\Upload\FileExtention;
+use OpenDesa\Legacy\Library\Upload\ValidationRuleMaker;
 
 class CI_Upload
 {

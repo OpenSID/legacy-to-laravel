@@ -1,6 +1,6 @@
 <?php
 
-namespace Fluent\Legacy\Database;
+namespace OpenDesa\Legacy\Database;
 
 /**
  * CodeIgniter.
@@ -735,7 +735,7 @@ abstract class CI_DB_driver
      */
     public function load_rdriver()
     {
-        $driver = 'Fluent\Legacy\Database\CI_DB_'.$this->dbdriver.'_result';
+        $driver = 'OpenDesa\Legacy\Database\CI_DB_'.$this->dbdriver.'_result';
 
         if (! class_exists($driver, false)) {
             require_once dirname(__FILE__).'/DB_result.php';

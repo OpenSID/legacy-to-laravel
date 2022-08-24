@@ -13,10 +13,10 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Core\Loader;
+namespace OpenDesa\Legacy\Core\Loader;
 
-use Fluent\Legacy\Core\CI_Controller;
-use Fluent\Legacy\Internal\DebugLog;
+use OpenDesa\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Internal\DebugLog;
 
 class ControllerPropertyInjector
 {

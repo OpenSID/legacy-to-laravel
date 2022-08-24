@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use Fluent\Legacy\Core\CI_Controller;
+use OpenDesa\Legacy\Core\CI_Controller;
 
 class Test extends CI_Controller
 {

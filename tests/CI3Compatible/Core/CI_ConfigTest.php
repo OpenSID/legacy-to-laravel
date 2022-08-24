@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Core;
+namespace OpenDesa\Legacy\Core;
 
-use Fluent\Legacy\Exception\RuntimeException;
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\Exception\RuntimeException;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class CI_ConfigTest extends TestCase
 {

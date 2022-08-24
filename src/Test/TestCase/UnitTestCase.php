@@ -13,9 +13,9 @@ declare(strict_types=1);
  * @see https://github.com/agungsugiarto/legacy-to-laravel
  */
 
-namespace Fluent\Legacy\Test\TestCase;
+namespace OpenDesa\Legacy\Test\TestCase;
 
-use Fluent\Legacy\Test\Traits\UnitTest;
+use OpenDesa\Legacy\Test\Traits\UnitTest;
 
 class UnitTestCase extends TestCase
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fluent\Legacy\Library\Upload;
+namespace OpenDesa\Legacy\Library\Upload;
 
-use Fluent\Legacy\TestSupport\TestCase;
+use OpenDesa\Legacy\TestSupport\TestCase;
 
 class FileExtenstionTest extends TestCase
 {
