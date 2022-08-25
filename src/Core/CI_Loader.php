@@ -215,12 +215,6 @@ class CI_Loader
             .' Please call CI_Loader::setController() before calling database().'
         );
 
-        if ($db !== null) {
-            throw new NotImplementedException(
-                '$db is not implemented yet.'
-            );
-        }
-
         $ret = $this->databaseLoader->loadDbForge($db, $return);
 
         if ($return && $ret instanceof CI_DB_forge) {

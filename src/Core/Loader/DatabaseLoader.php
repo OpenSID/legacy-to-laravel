@@ -58,17 +58,36 @@ class DatabaseLoader
         return false;
     }
 
-    public function loadDbForge(?object $db, bool $return): CI_DB_forge
+    public function loadDbForge(?object $db = null, bool $return = false)
     {
-        if ($return) {
-            return new CI_DB_forge($db);
+        $ci = &get_instance();
+        if (!is_object($db) or !($db instanceof CI_DB)) {
+            class_exists('CI_DB', false) or $this->load();
+            $db = &$ci->db;
+        }
+
+        require_once(__DIR__ . DIRECTORY_SEPARATOR . "../../Database/DB_forge.php");
+        require_once(__DIR__ . DIRECTORY_SEPARATOR . "../../Database/drivers/{$db->dbdriver}/{$db->dbdriver}_forge.php");
+
+        if (!empty($db->subdriver)) {
+            $driver_path = __DIR__ . DIRECTORY_SEPARATOR . "../../Database/drivers/{$db->dbdriver}/subdrivers/{$db->dbdriver}_{$db->subdriver}_forge.php";
+            if (file_exists($driver_path)) {
+                require_once($driver_path);
+                $class = "\OpenDesa\Legacy\Database\CI_DB_{$db->dbdriver}_{$db->subdriver}_forge";
+            }
+        } else {
+            $class = "\OpenDesa\Legacy\Database\CI_DB_{$db->dbdriver}_forge";
+        }
+
+        if ($return === true) {
+            return new $class($db);
         }
 
         if ($this->dbforge === null) {
-            $this->dbforge = new CI_DB_forge();
+            $this->dbforge = new $class($db);
             $this->injector->inject('dbforge', $this->dbforge);
         }
 
-        return $this->dbforge;
+        return $this;
     }
 }
