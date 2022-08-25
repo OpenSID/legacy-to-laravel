@@ -225,15 +225,16 @@ class CI_Loader
     }
 
     /**
-	 * Load the Database Utilities Class
-	 *
-	 * @param	object	$db	Database object
-	 * @param	bool	$return	Whether to return the DB Utilities class object or not
-	 * @return	object
-	 */
-	public function dbutil($db = NULL, $return = FALSE)
-	{
-		assert(
+     * Load the Database Utilities Class.
+     *
+     * @param object $db     Database object
+     * @param bool   $return Whether to return the DB Utilities class object or not
+     *
+     * @return object
+     */
+    public function dbutil($db = null, $return = false)
+    {
+        assert(
             is_object($this->databaseLoader),
             'Controller is not set.'
             .' Please call CI_Loader::setController() before calling database().'
@@ -246,7 +247,7 @@ class CI_Loader
         }
 
         return $this;
-	}
+    }
 
     /**
      * Library Loader.
