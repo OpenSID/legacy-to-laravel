@@ -61,18 +61,18 @@ class DatabaseLoader
     public function loadDbForge(?object $db = null, bool $return = false)
     {
         $ci = &get_instance();
-        if (!is_object($db) or !($db instanceof CI_DB)) {
+        if (! is_object($db) or ! ($db instanceof CI_DB)) {
             class_exists('CI_DB', false) or $this->load();
             $db = &$ci->db;
         }
 
-        require_once(__DIR__ . DIRECTORY_SEPARATOR . "../../Database/DB_forge.php");
-        require_once(__DIR__ . DIRECTORY_SEPARATOR . "../../Database/drivers/{$db->dbdriver}/{$db->dbdriver}_forge.php");
+        require_once __DIR__.DIRECTORY_SEPARATOR.'../../Database/DB_forge.php';
+        require_once __DIR__.DIRECTORY_SEPARATOR."../../Database/drivers/{$db->dbdriver}/{$db->dbdriver}_forge.php";
 
-        if (!empty($db->subdriver)) {
-            $driver_path = __DIR__ . DIRECTORY_SEPARATOR . "../../Database/drivers/{$db->dbdriver}/subdrivers/{$db->dbdriver}_{$db->subdriver}_forge.php";
+        if (! empty($db->subdriver)) {
+            $driver_path = __DIR__.DIRECTORY_SEPARATOR."../../Database/drivers/{$db->dbdriver}/subdrivers/{$db->dbdriver}_{$db->subdriver}_forge.php";
             if (file_exists($driver_path)) {
-                require_once($driver_path);
+                require_once $driver_path;
                 $class = "\OpenDesa\Legacy\Database\CI_DB_{$db->dbdriver}_{$db->subdriver}_forge";
             }
         } else {

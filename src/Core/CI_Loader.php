@@ -21,7 +21,6 @@ use OpenDesa\Legacy\Core\Loader\HelperLoader;
 use OpenDesa\Legacy\Core\Loader\LibraryLoader;
 use OpenDesa\Legacy\Core\Loader\ModelLoader;
 use OpenDesa\Legacy\Database\CI_DB_forge;
-use OpenDesa\Legacy\Exception\NotImplementedException;
 
 class CI_Loader
 {
