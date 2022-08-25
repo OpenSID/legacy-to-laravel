@@ -21,7 +21,7 @@ use OpenDesa\Legacy\Core\Loader\HelperLoader;
 use OpenDesa\Legacy\Core\Loader\LibraryLoader;
 use OpenDesa\Legacy\Core\Loader\ModelLoader;
 use OpenDesa\Legacy\Database\CI_DB_forge;
-use OpenDesa\Legacy\Exception\NotImplementedException;
+use OpenDesa\Legacy\Database\CI_DB_utility;
 
 class CI_Loader
 {
@@ -223,6 +223,30 @@ class CI_Loader
 
         return $this;
     }
+
+    /**
+	 * Load the Database Utilities Class
+	 *
+	 * @param	object	$db	Database object
+	 * @param	bool	$return	Whether to return the DB Utilities class object or not
+	 * @return	object
+	 */
+	public function dbutil($db = NULL, $return = FALSE)
+	{
+		assert(
+            is_object($this->databaseLoader),
+            'Controller is not set.'
+            .' Please call CI_Loader::setController() before calling database().'
+        );
+
+        $ret = $this->databaseLoader->loadDbUtil($db, $return);
+
+        if ($return && $ret instanceof CI_DB_utility) {
+            return $ret;
+        }
+
+        return $this;
+	}
 
     /**
      * Library Loader.

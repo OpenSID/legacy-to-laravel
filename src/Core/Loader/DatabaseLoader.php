@@ -18,6 +18,7 @@ namespace OpenDesa\Legacy\Core\Loader;
 use OpenDesa\Legacy\Database;
 use OpenDesa\Legacy\Database\CI_DB;
 use OpenDesa\Legacy\Database\CI_DB_forge;
+use OpenDesa\Legacy\Database\CI_DB_utility;
 
 class DatabaseLoader
 {
@@ -29,6 +30,9 @@ class DatabaseLoader
 
     /** @var CI_DB_forge */
     private $dbforge;
+
+    /** @var CI_DB_utility */
+    private $dbutil;
 
     public function __construct(ControllerPropertyInjector $injector)
     {
@@ -86,6 +90,31 @@ class DatabaseLoader
         if ($this->dbforge === null) {
             $this->dbforge = new $class($db);
             $this->injector->inject('dbforge', $this->dbforge);
+        }
+
+        return $this;
+    }
+
+    public function loadDbUtil(?object $db = null, bool $return = false)
+    {
+        $ci = &get_instance();
+        if (! is_object($db) or ! ($db instanceof CI_DB)) {
+            class_exists('CI_DB', false) or $this->load();
+            $db = &$ci->db;
+        }
+
+        require_once __DIR__.DIRECTORY_SEPARATOR.'../../Database/DB_utility.php';
+        require_once __DIR__.DIRECTORY_SEPARATOR."../../Database/drivers/{$db->dbdriver}/{$db->dbdriver}_utility.php";
+
+        $class = "\OpenDesa\Legacy\Database\CI_DB_{$db->dbdriver}_utility";
+
+        if ($return === true) {
+            return new $class($db);
+        }
+
+        if ($this->dbutil === null) {
+            $this->dbutil = new $class($db);
+            $this->injector->inject('dbutil', $this->dbutil);
         }
 
         return $this;
